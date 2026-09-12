@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneResourcesGenerator
   resources:
-  - prefab: {fileID: 8870884169029204051, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
+  - prefab: {fileID: 6027698839645420388, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
     amount: 150
     minimumBundleSize: 3
     maximumBundleSize: 10
