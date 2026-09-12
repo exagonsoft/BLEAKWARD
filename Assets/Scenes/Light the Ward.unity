@@ -1627,41 +1627,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneResourcesGenerator
   resources:
   - prefab: {fileID: 6027698839645420388, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
-    amount: 300
-    minimumBundleSize: 3
+    amount: 220
+    minimumBundleSize: 5
     maximumBundleSize: 10
+    maximumBundles: 40
     bundleRadius: 3.5
     nodeSpacing: 1.05
+    minimumBundleSeparation: 7
+    allowedInCenterZone: 1
+    guaranteedCenterBundle: 1
+    excludeFromCenterZone: 0
   - prefab: {fileID: 8870884169029204051, guid: 33a42ecff549e2544b87418c18be1b75, type: 3}
-    amount: 180
+    amount: 110
     minimumBundleSize: 3
-    maximumBundleSize: 8
-    bundleRadius: 2.75
-    nodeSpacing: 1.6
+    maximumBundleSize: 7
+    maximumBundles: 28
+    bundleRadius: 3
+    nodeSpacing: 1.4
+    minimumBundleSeparation: 8
+    allowedInCenterZone: 1
+    guaranteedCenterBundle: 1
+    excludeFromCenterZone: 0
   - prefab: {fileID: 8870884169029204051, guid: 66bfb9beca1684c438c18b4e17d7df2d, type: 3}
-    amount: 100
-    minimumBundleSize: 2
+    amount: 60
+    minimumBundleSize: 3
     maximumBundleSize: 5
+    maximumBundles: 22
     bundleRadius: 2.25
     nodeSpacing: 1.25
+    minimumBundleSeparation: 10
+    allowedInCenterZone: 0
+    guaranteedCenterBundle: 0
+    excludeFromCenterZone: 1
   - prefab: {fileID: 8870884169029204051, guid: f06b599207a999d4fb3cdf764530722c, type: 3}
-    amount: 50
-    minimumBundleSize: 1
+    amount: 24
+    minimumBundleSize: 2
     maximumBundleSize: 3
+    maximumBundles: 14
     bundleRadius: 1.75
     nodeSpacing: 1
+    minimumBundleSeparation: 13
+    allowedInCenterZone: 0
+    guaranteedCenterBundle: 0
+    excludeFromCenterZone: 1
   sceneDetailList: {fileID: 11400000, guid: a05e82bacdf36717ee71b63d60a52845, type: 2}
   spawnAreaSize: {x: 240, y: 165}
   spawnAreaCenter: {x: 0, y: 0}
-  centerClearRadius: 6
+  centerClearRadius: 10
+  centerResourceZoneRadius: 34
+  centerBundlePlacementAttempts: 500
+  requireCenterResources: 1
   resourceCollisionClearance: 0.2
-  minimumResourceBundleSeparation: 10
-  maxPlacementAttemptsPerNode: 400
+  defaultResourceBundleSeparation: 8
+  maxPlacementAttemptsPerNode: 500
   blockingLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   generateOnStart: 1
   randomSeed: 1337
+  clearBeforeGenerate: 1
+  resourcesParentName: Resources
+  detailsParentName: Scene Details
 --- !u!1 &1432729194
 GameObject:
   m_ObjectHideFlags: 0
