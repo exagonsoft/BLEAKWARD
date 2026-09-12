@@ -18,15 +18,15 @@ MonoBehaviour:
   - {fileID: 6684860765942087719, guid: e045ae0b42fdb4347b2daf0d05d5c3a6, type: 3}
   - {fileID: 8670749115296635603, guid: 31868c2d174a8804196c9befd6c3e6a6, type: 3}
   - {fileID: 4727826503147696511, guid: 43fb50b36f9d2f148bae5b94c87ad091, type: 3}
-  amount: 500
+  amount: 320
   generateInBundles: 1
-  minimumBundleSize: 3
-  maximumBundleSize: 8
-  bundleRadius: 2.5
-  nodeSpacing: 0.85
-  collisionClearance: 0.35
-  minimumBundleSeparation: 2
-  scaleRange: {x: 0.85, y: 1.15}
-  rotationRange: {x: -4, y: 4}
+  minimumBundleSize: 4
+  maximumBundleSize: 9
+  bundleRadius: 3
+  nodeSpacing: 0.8
+  collisionClearance: 0.25
+  minimumBundleSeparation: 1.5
+  scaleRange: {x: 0.78, y: 1.18}
+  rotationRange: {x: -7, y: 7}
   randomFlipX: 1
   randomFlipY: 0
