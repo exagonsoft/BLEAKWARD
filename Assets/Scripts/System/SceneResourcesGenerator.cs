@@ -83,10 +83,11 @@ public class SceneResourcesGenerator : MonoBehaviour
             return;
         }
 
-        List<PlacedBundle> placedBundles = new List<PlacedBundle>();
-
         foreach (ResourceSpawnDefinition resource in resources)
         {
+            // Bundle separation is scoped to this resource type. Different resources may
+            // grow next to each other; physical placement is still blocked by buildings.
+            List<PlacedBundle> placedBundles = new List<PlacedBundle>();
             GenerateResourceType(resource, random, placedBundles);
         }
     }
