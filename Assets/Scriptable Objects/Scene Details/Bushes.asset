@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1a4e76d9b84bf3aa3d729f2c61e401, type: 3}
+  m_Name: Bushes
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDetailSO
+  detailName: Bushes
+  prefabs:
+  - {fileID: 3974562727891374979, guid: 618c0af3c78a6cc4e999a245910a15f8, type: 3}
+  - {fileID: 6684860765942087719, guid: e045ae0b42fdb4347b2daf0d05d5c3a6, type: 3}
+  - {fileID: 8670749115296635603, guid: 31868c2d174a8804196c9befd6c3e6a6, type: 3}
+  - {fileID: 4727826503147696511, guid: 43fb50b36f9d2f148bae5b94c87ad091, type: 3}
+  amount: 180
+  generateInBundles: 1
+  minimumBundleSize: 2
+  maximumBundleSize: 6
+  bundleRadius: 2.5
+  nodeSpacing: 0.85
+  collisionClearance: 0.35
+  minimumBundleSeparation: 2
+  scaleRange: {x: 0.85, y: 1.15}
+  rotationRange: {x: -4, y: 4}
+  randomFlipX: 1
+  randomFlipY: 0
