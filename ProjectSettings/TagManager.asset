@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: TerrainLayer
+    uniqueID: 797405207
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: TopLayer
+    uniqueID: 3387430173
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  - TerrainLayer
+  - TopLayer
+  m_MigratedRenderPipelines: []

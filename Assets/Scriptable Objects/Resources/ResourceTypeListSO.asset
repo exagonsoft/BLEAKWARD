@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b471eb95c12e449b177cab4032eb76, type: 3}
+  m_Name: ResourceTypeListSO
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceTypeListSO
+  list:
+  - {fileID: 11400000, guid: 7f353e08d1865a24c87f6d23f058c560, type: 2}
+  - {fileID: 11400000, guid: 7d1d2fd6704f2274b8aa9ee15920b549, type: 2}
+  - {fileID: 11400000, guid: b45c5bb4335f5bf4caab08202d687031, type: 2}
+  - {fileID: 11400000, guid: 1fc5e6b333fa7924faf7e56e6344048f, type: 2}
