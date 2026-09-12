@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 779607601384531228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,11 +118,11 @@ GameObject:
   m_Component:
   - component: {fileID: 779607601384531228}
   - component: {fileID: 7356613186141417887}
-  - component: {fileID: 2902059697768775953}
+  - component: {fileID: 6485708952635460058}
   m_Layer: 0
   m_Name: PFIronResourceNode
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
   resourceType: {fileID: 11400000, guid: 7d1d2fd6704f2274b8aa9ee15920b549, type: 2}
---- !u!61 &2902059697768775953
-BoxCollider2D:
+--- !u!68 &6485708952635460058
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -189,15 +189,52 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0231072, y: -0.0033010244}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.010109, y: 1.2442746}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.7660261, y: -0.53201854}
+  - {x: 1.766821, y: -0.55497754}
+  - {x: 1.7609768, y: -0.5782925}
+  - {x: 1.7412902, y: -0.58376044}
+  - {x: 1.7489935, y: -0.6328484}
+  - {x: 1.7000196, y: -0.71962}
+  - {x: 1.4836452, y: -0.7568351}
+  - {x: 1.273715, y: -0.79657555}
+  - {x: 0.94859654, y: -0.8342386}
+  - {x: 0.6434276, y: -0.874428}
+  - {x: 0.25428954, y: -0.95556194}
+  - {x: -0.057654753, y: -0.9326357}
+  - {x: -0.3473303, y: -0.9180026}
+  - {x: -0.46626902, y: -0.8416351}
+  - {x: -0.7238357, y: -0.8201255}
+  - {x: -1.0587392, y: -0.84111524}
+  - {x: -1.3717827, y: -0.8382934}
+  - {x: -1.64928, y: -0.7350327}
+  - {x: -1.794908, y: -0.61092556}
+  - {x: -1.7503376, y: -0.43477887}
+  - {x: -1.5883653, y: -0.15240741}
+  - {x: -1.3179481, y: 0.24812704}
+  - {x: -1.0043021, y: 0.55051893}
+  - {x: -0.74105304, y: 0.72904694}
+  - {x: -0.5790445, y: 0.74054927}
+  - {x: -0.22757788, y: 0.9902495}
+  - {x: 0.27242225, y: 1.0475045}
+  - {x: 0.40920565, y: 0.8344803}
+  - {x: 0.7164531, y: 0.5930958}
+  - {x: 0.81801605, y: 0.55765426}
+  - {x: 0.9083979, y: 0.32423383}
+  - {x: 1.0219021, y: 0.13485469}
+  - {x: 1.0678986, y: 0.13104254}
+  - {x: 1.201374, y: -0.014979899}
+  - {x: 1.2455535, y: -0.016238622}
+  - {x: 1.292819, y: -0.044168085}
+  - {x: 1.4869138, y: -0.29519492}
+  - {x: 1.5451097, y: -0.2827516}
+  - {x: 1.5926274, y: -0.36476898}
+  - {x: 1.6391531, y: -0.43782073}
+  - {x: 1.7133188, y: -0.4762208}
+  - {x: 1.7666059, y: -0.5332912}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

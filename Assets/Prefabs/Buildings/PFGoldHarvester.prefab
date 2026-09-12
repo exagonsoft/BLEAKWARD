@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SritePositionSortingOrder
   runOnce: 1
-  positionOffsetY: 5.12
+  positionOffsetY: 0
   presitionSortingOrder: 5
 --- !u!1 &4821211488437780616
 GameObject:
