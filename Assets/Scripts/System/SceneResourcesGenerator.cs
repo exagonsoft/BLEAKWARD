@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SceneResourcesGenerator : MonoBehaviour
 {
@@ -135,6 +136,7 @@ public class SceneResourcesGenerator : MonoBehaviour
     [Tooltip(
         "Fallback separation used when a resource has no per-resource value configured.")]
     [SerializeField, Min(0f)]
+    [FormerlySerializedAs("minimumResourceBundleSeparation")]
     private float defaultResourceBundleSeparation = 9f;
 
     [Tooltip(
@@ -270,13 +272,16 @@ public class SceneResourcesGenerator : MonoBehaviour
          * Iron/Gold will automatically be kept outside the center zone
          * through their resource configuration.
          */
-        for (int resourceIndex = 0;
-             resourceIndex < resources.Length;
-             resourceIndex++)
-        {
-            ResourceSpawnDefinition resource =
-                resources[resourceIndex];
+        List<ResourceSpawnDefinition> placementOrder =
+            new List<ResourceSpawnDefinition>(resources);
 
+        // Reserve good locations for scarce resources first. Abundant
+        // resources and details can then fill the remaining space naturally.
+        placementOrder.Sort(
+            (left, right) => left.amount.CompareTo(right.amount));
+
+        foreach (ResourceSpawnDefinition resource in placementOrder)
+        {
             GenerateResourceType(
                 resource,
                 resourcesParent,
@@ -291,9 +296,6 @@ public class SceneResourcesGenerator : MonoBehaviour
         System.Random random,
         List<PlacedBundle> occupiedResourceBundles)
     {
-        bool woodFound = false;
-        bool stoneFound = false;
-
         /*
          * First pass explicitly searches for resources marked as guaranteed.
          */
@@ -331,38 +333,6 @@ public class SceneResourcesGenerator : MonoBehaviour
                     this);
             }
 
-            if (IsResourceNamed(resource, "Wood"))
-            {
-                woodFound = generated;
-            }
-
-            if (IsResourceNamed(resource, "Stone"))
-            {
-                stoneFound = generated;
-            }
-        }
-
-        /*
-         * If the inspector configuration is being used exactly as intended
-         * for Wood and Stone, these flags will be true.
-         *
-         * We keep this explicit warning because these two resources are part
-         * of the gameplay rule, not merely decoration.
-         */
-        if (!woodFound)
-        {
-            Debug.LogWarning(
-                "Wood does not have a guaranteed center bundle. " +
-                "Set Wood -> Guaranteed Center Bundle = true.",
-                this);
-        }
-
-        if (!stoneFound)
-        {
-            Debug.LogWarning(
-                "Stone does not have a guaranteed center bundle. " +
-                "Set Stone -> Guaranteed Center Bundle = true.",
-                this);
         }
     }
 
@@ -628,12 +598,13 @@ public class SceneResourcesGenerator : MonoBehaviour
          *
          * Guaranteed bundles are generated before this method.
          */
+        int existingNodes =
+            resource.guaranteedCenterBundle
+                ? CountResourceNodes(resourceParent)
+                : 0;
+
         bool centerBundleAlreadyGenerated =
-            resource.guaranteedCenterBundle &&
-            IsResourceNamed(
-                resource,
-                "Wood",
-                "Stone");
+            existingNodes > 0;
 
         /*
          * The guaranteed center bundle is already part of the requested
@@ -646,10 +617,6 @@ public class SceneResourcesGenerator : MonoBehaviour
              * so the resource amount accounting is handled by finding the
              * existing nodes under the generated parent.
              */
-            int existingNodes =
-                CountResourceNodes(
-                    resourceParent);
-
             state.spawnedAmount =
                 existingNodes;
 
@@ -741,28 +708,17 @@ public class SceneResourcesGenerator : MonoBehaviour
                 return false;
             }
 
-            if (resource.excludeFromCenterZone)
+            if (resource.excludeFromCenterZone ||
+                !resource.allowedInCenterZone)
             {
                 float distance =
                     Vector2.Distance(
                         position,
                         spawnAreaCenter);
 
-                if (distance <
-                    centerResourceZoneRadius)
-                {
-                    return false;
-                }
-            }
-
-            if (!resource.allowedInCenterZone)
-            {
-                float distance =
-                    Vector2.Distance(
-                        position,
-                        spawnAreaCenter);
-
-                if (distance <
+                // Protect the complete center zone from the bundle footprint,
+                // not only from the bundle's center point.
+                if (distance - bundleRadius <
                     centerResourceZoneRadius)
                 {
                     return false;
@@ -1581,6 +1537,10 @@ public class SceneResourcesGenerator : MonoBehaviour
 
         if (Application.isPlaying)
         {
+            // Destroy is deferred until the end of the frame. Detach first so
+            // a same-frame regeneration cannot reuse a doomed hierarchy.
+            target.transform.SetParent(null);
+            target.name = $"{target.name} (Pending Destruction)";
             Destroy(target);
         }
         else
