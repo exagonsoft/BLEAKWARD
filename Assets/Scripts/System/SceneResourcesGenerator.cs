@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneResourcesGenerator : MonoBehaviour
@@ -19,9 +20,25 @@ public class SceneResourcesGenerator : MonoBehaviour
         [Min(1)]
         public int maximumBundleSize;
 
-        [Tooltip("Maximum distance from the bundle center.")]
+        [Tooltip("Maximum distance a node can grow from the bundle center.")]
         [Min(0f)]
         public float bundleRadius;
+
+        [Tooltip("Approximate center-to-center distance between neighboring nodes.")]
+        [Min(0.1f)]
+        public float nodeSpacing;
+    }
+
+    private struct PlacedBundle
+    {
+        public Vector2 center;
+        public float radius;
+
+        public PlacedBundle(Vector2 center, float radius)
+        {
+            this.center = center;
+            this.radius = radius;
+        }
     }
 
     [Header("Resources")]
@@ -30,9 +47,10 @@ public class SceneResourcesGenerator : MonoBehaviour
     [Header("Spawn Area")]
     [SerializeField] private Vector2 spawnAreaSize = new Vector2(240f, 165f);
     [SerializeField] private Vector2 spawnAreaCenter;
-    [SerializeField, Min(0f)] private float minimumSpacing = 2.5f;
     [SerializeField, Min(0f)] private float centerClearRadius = 12f;
-    [SerializeField, Min(1)] private int maxPlacementAttemptsPerNode = 50;
+    [SerializeField, Min(0f)] private float collisionClearance = 0.25f;
+    [SerializeField, Min(0f)] private float minimumBundleSeparation = 8f;
+    [SerializeField, Min(1)] private int maxPlacementAttemptsPerNode = 100;
     [SerializeField] private LayerMask blockingLayers = Physics2D.AllLayers;
 
     [Header("Generation")]
@@ -57,14 +75,18 @@ public class SceneResourcesGenerator : MonoBehaviour
         }
 
         System.Random random = new System.Random(randomSeed);
+        List<PlacedBundle> placedBundles = new List<PlacedBundle>();
 
         foreach (ResourceSpawnDefinition resource in resources)
         {
-            GenerateResourceType(resource, random);
+            GenerateResourceType(resource, random, placedBundles);
         }
     }
 
-    private void GenerateResourceType(ResourceSpawnDefinition resource, System.Random random)
+    private void GenerateResourceType(
+        ResourceSpawnDefinition resource,
+        System.Random random,
+        List<PlacedBundle> placedBundles)
     {
         if (resource.prefab == null || resource.amount <= 0)
         {
@@ -73,7 +95,8 @@ public class SceneResourcesGenerator : MonoBehaviour
 
         int minimumBundleSize = Mathf.Max(1, resource.minimumBundleSize);
         int maximumBundleSize = Mathf.Max(minimumBundleSize, resource.maximumBundleSize);
-        float bundleRadius = Mathf.Max(minimumSpacing, resource.bundleRadius);
+        float nodeSpacing = Mathf.Max(0.1f, resource.nodeSpacing);
+        float bundleRadius = Mathf.Max(nodeSpacing, resource.bundleRadius);
         int spawnedAmount = 0;
         int bundleIndex = 0;
 
@@ -84,48 +107,55 @@ public class SceneResourcesGenerator : MonoBehaviour
                 remainingAmount,
                 random.Next(minimumBundleSize, maximumBundleSize + 1));
 
-            if (!TryGetBundleCenter(random, out Vector2 bundleCenter))
+            if (!TryGetBundleCenter(bundleRadius, placedBundles, random, out Vector2 bundleCenter))
             {
                 LogPlacementWarning(resource, spawnedAmount);
                 return;
             }
 
-            int nodesSpawnedInBundle = 0;
-
-            for (int nodeIndex = 0; nodeIndex < bundleSize; nodeIndex++)
+            List<Vector2> bundlePositions = new List<Vector2>(bundleSize)
             {
-                if (!TryGetPositionInBundle(bundleCenter, bundleRadius, random, out Vector2 localPosition))
+                bundleCenter
+            };
+
+            SpawnResourceNode(resource.prefab, bundleCenter, bundleIndex, 0);
+            spawnedAmount++;
+
+            for (int nodeIndex = 1; nodeIndex < bundleSize; nodeIndex++)
+            {
+                if (!TryGrowBundle(
+                        bundleCenter,
+                        bundleRadius,
+                        nodeSpacing,
+                        bundlePositions,
+                        random,
+                        out Vector2 localPosition))
                 {
                     break;
                 }
 
+                bundlePositions.Add(localPosition);
+                SpawnResourceNode(resource.prefab, localPosition, bundleIndex, nodeIndex);
                 spawnedAmount++;
-                nodesSpawnedInBundle++;
-
-                GameObject resourceNode = Instantiate(resource.prefab, transform);
-                resourceNode.name =
-                    $"{resource.prefab.name}_Bundle_{bundleIndex + 1:00}_Node_{nodesSpawnedInBundle:00}";
-                resourceNode.transform.localPosition = new Vector3(localPosition.x, localPosition.y, 0f);
-                resourceNode.transform.localRotation = Quaternion.identity;
             }
 
-            if (nodesSpawnedInBundle == 0)
-            {
-                LogPlacementWarning(resource, spawnedAmount);
-                return;
-            }
-
+            placedBundles.Add(new PlacedBundle(bundleCenter, bundleRadius));
             bundleIndex++;
         }
     }
 
-    private bool TryGetBundleCenter(System.Random random, out Vector2 bundleCenter)
+    private bool TryGetBundleCenter(
+        float bundleRadius,
+        List<PlacedBundle> placedBundles,
+        System.Random random,
+        out Vector2 bundleCenter)
     {
         for (int attempt = 0; attempt < maxPlacementAttemptsPerNode; attempt++)
         {
-            Vector2 candidate = GetRandomLocalPosition(random);
+            Vector2 candidate = GetRandomLocalPosition(bundleRadius, random);
 
-            if (CanPlaceAt(candidate))
+            if (CanPlaceAt(candidate) &&
+                IsSeparatedFromOtherBundles(candidate, bundleRadius, placedBundles))
             {
                 bundleCenter = candidate;
                 return true;
@@ -136,45 +166,59 @@ public class SceneResourcesGenerator : MonoBehaviour
         return false;
     }
 
-    private bool TryGetPositionInBundle(
+    private bool TryGrowBundle(
         Vector2 bundleCenter,
         float bundleRadius,
+        float nodeSpacing,
+        List<Vector2> bundlePositions,
         System.Random random,
         out Vector2 localPosition)
     {
+        float minimumNodeDistance = nodeSpacing * 0.7f;
+
         for (int attempt = 0; attempt < maxPlacementAttemptsPerNode; attempt++)
         {
-            Vector2 candidate = attempt == 0
-                ? bundleCenter
-                : bundleCenter + GetRandomPointInCircle(bundleRadius, random);
+            Vector2 anchor = bundlePositions[random.Next(bundlePositions.Count)];
+            float angle = (float)random.NextDouble() * Mathf.PI * 2f;
+            float distance = nodeSpacing * Mathf.Lerp(0.85f, 1.15f, (float)random.NextDouble());
+            Vector2 candidate = anchor + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
 
-            if (CanPlaceAt(candidate))
+            if (Vector2.Distance(candidate, bundleCenter) > bundleRadius ||
+                !IsFarEnoughFromBundleNodes(candidate, bundlePositions, minimumNodeDistance) ||
+                !CanPlaceAt(candidate))
             {
-                localPosition = candidate;
-                return true;
+                continue;
             }
+
+            localPosition = candidate;
+            return true;
         }
 
         localPosition = default;
         return false;
     }
 
-    private Vector2 GetRandomLocalPosition(System.Random random)
+    private void SpawnResourceNode(
+        GameObject prefab,
+        Vector2 localPosition,
+        int bundleIndex,
+        int nodeIndex)
     {
-        float halfWidth = spawnAreaSize.x * 0.5f;
-        float halfHeight = spawnAreaSize.y * 0.5f;
-
-        return spawnAreaCenter + new Vector2(
-            Mathf.Lerp(-halfWidth, halfWidth, (float)random.NextDouble()),
-            Mathf.Lerp(-halfHeight, halfHeight, (float)random.NextDouble()));
+        GameObject resourceNode = Instantiate(prefab, transform);
+        resourceNode.name = $"{prefab.name}_Bundle_{bundleIndex + 1:00}_Node_{nodeIndex + 1:00}";
+        resourceNode.transform.localPosition = new Vector3(localPosition.x, localPosition.y, 0f);
+        resourceNode.transform.localRotation = Quaternion.identity;
     }
 
-    private static Vector2 GetRandomPointInCircle(float radius, System.Random random)
+    private Vector2 GetRandomLocalPosition(float bundleRadius, System.Random random)
     {
-        float angle = (float)random.NextDouble() * Mathf.PI * 2f;
-        float distance = Mathf.Sqrt((float)random.NextDouble()) * radius;
+        Vector2 halfSize = spawnAreaSize * 0.5f - Vector2.one * bundleRadius;
+        halfSize.x = Mathf.Max(0f, halfSize.x);
+        halfSize.y = Mathf.Max(0f, halfSize.y);
 
-        return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
+        return spawnAreaCenter + new Vector2(
+            Mathf.Lerp(-halfSize.x, halfSize.x, (float)random.NextDouble()),
+            Mathf.Lerp(-halfSize.y, halfSize.y, (float)random.NextDouble()));
     }
 
     private bool CanPlaceAt(Vector2 localPosition)
@@ -183,25 +227,70 @@ public class SceneResourcesGenerator : MonoBehaviour
         Vector2 offsetFromAreaCenter = localPosition - spawnAreaCenter;
 
         if (Mathf.Abs(offsetFromAreaCenter.x) > halfSize.x ||
-            Mathf.Abs(offsetFromAreaCenter.y) > halfSize.y)
-        {
-            return false;
-        }
-
-        if (offsetFromAreaCenter.magnitude < centerClearRadius)
+            Mathf.Abs(offsetFromAreaCenter.y) > halfSize.y ||
+            offsetFromAreaCenter.magnitude < centerClearRadius)
         {
             return false;
         }
 
         Vector3 worldPosition = transform.TransformPoint(localPosition);
-        return Physics2D.OverlapCircle(worldPosition, minimumSpacing, blockingLayers) == null;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(
+            worldPosition,
+            collisionClearance,
+            blockingLayers);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponentInParent<ResourceNode>() == null)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private bool IsSeparatedFromOtherBundles(
+        Vector2 candidate,
+        float candidateRadius,
+        List<PlacedBundle> placedBundles)
+    {
+        foreach (PlacedBundle bundle in placedBundles)
+        {
+            float requiredDistance =
+                candidateRadius + bundle.radius + minimumBundleSeparation;
+
+            if (Vector2.Distance(candidate, bundle.center) < requiredDistance)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static bool IsFarEnoughFromBundleNodes(
+        Vector2 candidate,
+        List<Vector2> bundlePositions,
+        float minimumDistance)
+    {
+        foreach (Vector2 position in bundlePositions)
+        {
+            if (Vector2.Distance(candidate, position) < minimumDistance)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private void LogPlacementWarning(ResourceSpawnDefinition resource, int spawnedAmount)
     {
         Debug.LogWarning(
             $"Could only place {spawnedAmount} of {resource.amount} '{resource.prefab.name}' nodes. " +
-            "Increase the spawn area, bundle radius, or placement attempts, or reduce the minimum spacing.",
+            "Increase the spawn area or placement attempts, reduce bundle separation, " +
+            "or reduce the configured resource amount.",
             this);
     }
 
