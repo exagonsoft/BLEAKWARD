@@ -1630,27 +1630,33 @@ MonoBehaviour:
     amount: 150
     minimumBundleSize: 3
     maximumBundleSize: 10
-    bundleRadius: 8
+    bundleRadius: 3.5
+    nodeSpacing: 1.05
   - prefab: {fileID: 8870884169029204051, guid: 33a42ecff549e2544b87418c18be1b75, type: 3}
     amount: 50
     minimumBundleSize: 3
     maximumBundleSize: 8
-    bundleRadius: 7
+    bundleRadius: 2.75
+    nodeSpacing: 1.6
   - prefab: {fileID: 8870884169029204051, guid: 66bfb9beca1684c438c18b4e17d7df2d, type: 3}
     amount: 30
     minimumBundleSize: 2
     maximumBundleSize: 5
-    bundleRadius: 6
+    bundleRadius: 2.25
+    nodeSpacing: 1.25
   - prefab: {fileID: 8870884169029204051, guid: f06b599207a999d4fb3cdf764530722c, type: 3}
     amount: 15
     minimumBundleSize: 1
     maximumBundleSize: 3
-    bundleRadius: 5
+    bundleRadius: 1.75
+    nodeSpacing: 1
+  sceneDetailList: {fileID: 11400000, guid: a05e82bacdf36717ee71b63d60a52845, type: 2}
   spawnAreaSize: {x: 240, y: 165}
   spawnAreaCenter: {x: 0, y: 0}
-  minimumSpacing: 2.5
   centerClearRadius: 12
-  maxPlacementAttemptsPerNode: 50
+  resourceCollisionClearance: 0.2
+  minimumResourceBundleSeparation: 9
+  maxPlacementAttemptsPerNode: 100
   blockingLayers:
     serializedVersion: 2
     m_Bits: 4294967295
