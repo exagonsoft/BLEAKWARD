@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c272ebe9d3bdac42b507a99241618a9, type: 3}
+  m_Name: MachineGunTower
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingTypeSO
+  buildingName: MachineGun Tower
+  buildingPrefab: {fileID: 1306339390990453113, guid: dddadb2fd98ee004ebd4d13b7623f3e5, type: 3}
+  sprite: {fileID: 21300000, guid: 1914340a5331de84ba59fba1ee9e53d4, type: 3}
+  minConstructionRadius: 0
+  isResourceGenerator: 0
+  resourceGeneratorData:
+    timerMax: 1
+    ammountPerGeneration: 1
+    resourceDetectionRadius: 5
+    maxResourceAmount: 5
+    resourceType: {fileID: 0}
+  constructionResourceCosts:
+  - resourceType: {fileID: 11400000, guid: 1fc5e6b333fa7924faf7e56e6344048f, type: 2}
+    ammount: 50
+  - resourceType: {fileID: 11400000, guid: b45c5bb4335f5bf4caab08202d687031, type: 2}
+    ammount: 50
+  healthAmountMax: 100

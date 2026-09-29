@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: Assembly-CSharp::ResourceTypeSO
   resourceType: Wood
+  resourceTypeShortName: W
   resourceSprite: {fileID: 21300000, guid: 72b969cbeb31b5b4c993a373cb3a9519, type: 3}
+  resourceColorHex: 91530C

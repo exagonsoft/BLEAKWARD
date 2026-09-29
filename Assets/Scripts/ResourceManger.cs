@@ -8,6 +8,7 @@ public class ResourceManger : MonoBehaviour
     public static ResourceManger Instance { get; private set; }
 
     public event EventHandler OnResourceAmountChanged;
+    [SerializeField] private List<ResourceAmmount> startingResourceAmmountList;
     private Dictionary<ResourceTypeSO, int> resourceAmountDictionary;
     private ResourceTypeListSO resourceTypeList;
 
@@ -41,6 +42,11 @@ public class ResourceManger : MonoBehaviour
         {
             resourceAmountDictionary[resourceType] = 0;
         }
+
+        foreach (ResourceAmmount resourceAmmount in startingResourceAmmountList)
+        {
+            AddResource(resourceAmmount.resourceType, resourceAmmount.ammount);
+        }
     }
 
 
@@ -61,4 +67,24 @@ public class ResourceManger : MonoBehaviour
     {
         return resourceAmountDictionary[resourceType];
     }
+
+    public bool CanAfford(ResourceAmmount[] resourceAmmountArray)
+    {
+        foreach (ResourceAmmount resourceAmmount in resourceAmmountArray)
+        {
+            if (GetResourceAmount(resourceAmmount.resourceType) < resourceAmmount.ammount)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public void SpendResources(ResourceAmmount[] resourceAmmountArray)
+    {
+        foreach (ResourceAmmount resourceAmmount in resourceAmmountArray)
+        {
+            resourceAmountDictionary[resourceAmmount.resourceType] -= resourceAmmount.ammount;
+        }
+    }
+
 }

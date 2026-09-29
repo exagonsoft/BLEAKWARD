@@ -47,6 +47,9 @@ TagManager:
   - name: TopLayer
     uniqueID: 3387430173
     locked: 0
+  - name: BloomTakers
+    uniqueID: 2862012803
+    locked: 0
   m_RenderingLayers:
   - Default
   - TerrainLayer

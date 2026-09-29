@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Iron
   m_EditorClassIdentifier: Assembly-CSharp::ResourceTypeSO
   resourceType: Iron
+  resourceTypeShortName: I
   resourceSprite: {fileID: 21300000, guid: 1d2b60845754e6541bc46e2a6c1553e3, type: 3}
+  resourceColorHex: 815CBA

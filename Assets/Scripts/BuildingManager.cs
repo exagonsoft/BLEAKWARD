@@ -16,6 +16,8 @@ public class BuildingManager : MonoBehaviour
         public BuildingTypeSO activeBuildingType;
     }
 
+    [SerializeField] private Building townHallBuilding;
+
     private BuildingTypeListSO buildingTypeList;
     private BuildingTypeSO activeBuildingType;
     private Camera mainCamera;
@@ -45,9 +47,40 @@ public class BuildingManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            if(activeBuildingType != null && CanSpawnBuilding(activeBuildingType, UtilsClass.GetMouseWorldPosition()))
+            if(activeBuildingType != null)
             {
-                Instantiate(activeBuildingType.buildingPrefab, UtilsClass.GetMouseWorldPosition(), Quaternion.identity);
+                string onBuildError = "";
+                if (!CanSpawnBuilding(activeBuildingType, UtilsClass.GetMouseWorldPosition(), out onBuildError))
+                {
+                    ToolTipUI.Instance.Show(onBuildError, new ToolTipUI.ToolTipTimer { timer = 2f });
+                }
+                else
+                {
+                    if (ResourceManger.Instance.CanAfford(activeBuildingType.constructionResourceCosts))
+                    {
+                        ResourceManger.Instance.SpendResources(activeBuildingType.constructionResourceCosts);
+                        Instantiate(activeBuildingType.buildingPrefab, UtilsClass.GetMouseWorldPosition(), Quaternion.identity);
+                        Vector2 buildingColliderArea = activeBuildingType.buildingPrefab.GetComponent<BoxCollider2D>().size;
+                        Collider2D[] detailColliders = Physics2D.OverlapBoxAll(UtilsClass.GetMouseWorldPosition(), buildingColliderArea, 0f);
+                        foreach (Collider2D detailCollider2D in detailColliders)
+                        {
+                            DetailNode detailNode = detailCollider2D.GetComponent<DetailNode>();
+                            if (detailNode != null)
+                            {
+                                detailNode.DestroyDetailNode();
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        onBuildError = $"Insufficient resources. \n{activeBuildingType.GetConstructionResources()}";
+                        ToolTipUI.Instance.Show(onBuildError, new ToolTipUI.ToolTipTimer { timer = 2f });
+                        return;
+                    }
+                }
+                
+
             }
         }
     }
@@ -69,16 +102,26 @@ public class BuildingManager : MonoBehaviour
         activeBuildingType = null;
     }
 
-    private bool CanSpawnBuilding(BuildingTypeSO buildingType, Vector3 position)
+    private bool CanSpawnBuilding(BuildingTypeSO buildingType, Vector3 position, out string reason)
     {
+        reason = "";
         BoxCollider2D boxCollider2D = buildingType.buildingPrefab.GetComponent<BoxCollider2D>();
 
         Collider2D[] collider2DArray = Physics2D.OverlapBoxAll(position + (Vector3)boxCollider2D.offset, boxCollider2D.size, 0f);
-       
-        bool isAreaClear = collider2DArray.Length == 0;
-        if (!isAreaClear)
+
+        
+        foreach (Collider2D collider2D in collider2DArray)
         {
-            return false;
+            collider2D.TryGetComponent<DetailNode>(out DetailNode detailNode);
+            if (detailNode != null)
+            {
+                continue;
+            }
+            else
+            {
+                reason = "\nCannot spawn building here.";
+                return false;
+            }
         }
 
         collider2DArray = Physics2D.OverlapCircleAll(position, buildingType.minConstructionRadius);
@@ -90,6 +133,7 @@ public class BuildingManager : MonoBehaviour
             {
                 if(buildingTypeHolder.buildingType == buildingType)
                 {
+                    reason = "\nToo close to another building of the same type.";
                     return false;
                 }
             }
@@ -107,6 +151,7 @@ public class BuildingManager : MonoBehaviour
             }
         }
 
+        reason = "\nToo far from any other building.";
         return false;
     }
 
@@ -123,6 +168,11 @@ public class BuildingManager : MonoBehaviour
     public BuildingTypeSO GetActiveBuildingType()
     {
         return activeBuildingType;
+    }
+
+    public Building GetTownHallBuilding()
+    {
+        return townHallBuilding;
     }
 
     

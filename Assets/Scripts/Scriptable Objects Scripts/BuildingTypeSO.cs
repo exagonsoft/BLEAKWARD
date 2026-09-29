@@ -7,5 +7,18 @@ public class BuildingTypeSO : ScriptableObject
     public Transform buildingPrefab;
     public Sprite sprite;
     public float minConstructionRadius;
+    public bool isResourceGenerator;
     public ResourceGeneratorData resourceGeneratorData;
+    public ResourceAmmount[] constructionResourceCosts;
+    public float healthAmountMax;
+
+    public string GetConstructionResources()
+    {
+        string resources = "";
+        foreach (ResourceAmmount resourceAmmount in constructionResourceCosts)
+        {
+            resources += $"<color=#{resourceAmmount.resourceType.resourceColorHex}>{resourceAmmount.resourceType.resourceTypeShortName}: {resourceAmmount.ammount}</color>\n";
+        }
+        return resources;
+    }
 }

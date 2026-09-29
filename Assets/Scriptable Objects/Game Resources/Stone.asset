@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: Assembly-CSharp::ResourceTypeSO
   resourceType: Stone
+  resourceTypeShortName: S
   resourceSprite: {fileID: 21300000, guid: 80de682014d680e4a9c065e55f34cc23, type: 3}
+  resourceColorHex: 66625F

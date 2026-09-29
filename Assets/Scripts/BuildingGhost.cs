@@ -4,6 +4,7 @@ using UnityEngine;
 public class BuildingGhost : MonoBehaviour
 {
     [SerializeField] private GameObject spriteGameObject;
+    [SerializeField] private ResourcesNearByOverlayUI resourcesNearByOverlayUI;
 
     private void Awake()
     {
@@ -29,19 +30,29 @@ public class BuildingGhost : MonoBehaviour
         }
         else
         {
-            Show(e.activeBuildingType);
+            Show(e.activeBuildingType.sprite);
+            if (e.activeBuildingType.isResourceGenerator)
+            {
+                resourcesNearByOverlayUI.Show(e.activeBuildingType.resourceGeneratorData);
+            }
+            else
+            {
+                resourcesNearByOverlayUI.Hide();
+            }
         }
     }
 
     private void Hide()
     {
         spriteGameObject.SetActive(false);
+        resourcesNearByOverlayUI.Hide();
     }
 
-    private void Show(BuildingTypeSO buildingType)
+    private void Show(Sprite sprite)
     {
         spriteGameObject.SetActive(true);
-        spriteGameObject.GetComponent<SpriteRenderer>().sprite = buildingType.sprite;
+        
+        spriteGameObject.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
 }
