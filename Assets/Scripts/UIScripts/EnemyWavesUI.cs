@@ -7,6 +7,13 @@ public class EnemyWavesUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI waveNumberLabel;
     [SerializeField] private TextMeshProUGUI nextWaveMessageLabel;
     [SerializeField] private EnemyWaveManager enemyWaveManager;
+    [SerializeField] private RectTransform nextWaveIndicatorRectTransform;
+    private Camera mainCamera;
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+    }   
 
     private void Start()
     {
@@ -26,7 +33,9 @@ public class EnemyWavesUI : MonoBehaviour
             SetMessageText("Next Wave In: " + Mathf.Ceil(nextWaveSpawnTimer) + "s");
         }
 
-
+        Vector3 direction = (enemyWaveManager.GetNextWaveSpawnPosition() - mainCamera.transform.position).normalized;
+        nextWaveIndicatorRectTransform.anchoredPosition = direction * 300f;
+        nextWaveIndicatorRectTransform.eulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(direction));
     }
 
     private void EnemyWaveManager_OnWaveNumberChanged(object sender, EventArgs e)
