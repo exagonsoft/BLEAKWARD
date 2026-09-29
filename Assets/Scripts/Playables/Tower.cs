@@ -69,7 +69,6 @@ public class Tower : MonoBehaviour
                         targetEnemy = enemy;
                     }
                 }
-                return;
             }
         }
     }
