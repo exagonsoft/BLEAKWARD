@@ -1,0 +1,12 @@
+{
+    "asset": "40a2f4d28479541488f84898a9ad0719",
+    "fileName": "01a0ef28-71b7-7671-9c13-96abb809e603_Preview.png",
+    "prompt": "Simple sprite 2d shader",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash-texture",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": 1510563539,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation"
+}
