@@ -217,6 +217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   targetLookRadius: 20
   turretGunTransform: {fileID: 398989590223383519}
+  turretBase: {fileID: 0}
+  turretBaseLeft: {fileID: 0}
+  turretBaseRight: {fileID: 0}
+  turretGun: {fileID: 0}
+  turretRotationSpeed: 180
   shootTimerMax: 0.2
 --- !u!1 &9070814993137013480
 GameObject:
@@ -301,7 +306,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0ac0d3d57770b2a478dc11bdacba30f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bda8732d05859448b93abd7526ea6ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
