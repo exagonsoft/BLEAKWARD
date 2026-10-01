@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1a4e76d9b84bf3aa3d729f2c61e401, type: 3}
+  m_Name: LightTheWardSceneDetails_WreacksSO
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDetailSO
+  detailName: Light The Ward Scene Details Wreacks
+  stableId: 1402ee20033b4ac58b8b5d0ddd9f8840
+  prefabs:
+  - {fileID: 5172356214218133020, guid: 373637acac60ff04eb01cace600c0714, type: 3}
+  - {fileID: 3281055633875711639, guid: ba543bcb660831b4d9c155cc69a32fe9, type: 3}
+  - {fileID: 5510331998992616474, guid: c9a703662400e804c82d0f56362c72ad, type: 3}
+  - {fileID: 6902046115248377213, guid: 96c202f6ec7b7154c9c51f5bc051a382, type: 3}
+  - {fileID: 7590996318074672488, guid: 3af5d5ce66466fc4a9f6ccba7515030f, type: 3}
+  - {fileID: 3064110474414122770, guid: 72f2c27cfadc07c439c14d80a6768938, type: 3}
+  - {fileID: 5949008841650225304, guid: 61fc9e351c8a77d42b598448dd7890e2, type: 3}
+  - {fileID: 6829374029445989716, guid: 435d58afcd62c204e87de23a5a3c64cc, type: 3}
+  amount: 250
+  generationChance: 0.505
+  placementLayer: 2
+  reservesBundleSpace: 0
+  avoidResources: 1
+  avoidBlockingObjects: 1
+  generateInBundles: 1
+  minimumBundleSize: 1
+  maximumBundleSize: 3
+  bundleRadius: 2.5
+  nodeSpacing: 1
+  collisionClearance: 0.25
+  minimumBundleSeparation: 2
+  scaleRange: {x: 1.24, y: 1.45}
+  rotationRange: {x: -5, y: 5}
+  randomFlipX: 1
+  randomFlipY: 0

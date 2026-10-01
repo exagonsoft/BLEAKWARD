@@ -1,62 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
+
+[ExecuteAlways]
 public class SceneResourcesGenerator : MonoBehaviour
 {
-    [Serializable]
-    private struct ResourceSpawnDefinition
-    {
-        [Tooltip("Resource prefab to spawn.")]
-        public GameObject prefab;
-
-        [Tooltip("Total number of resource nodes to generate.")]
-        [Min(0)]
-        public int amount;
-
-        [Tooltip("Minimum number of nodes in a resource bundle.")]
-        [Min(1)]
-        public int minimumBundleSize;
-
-        [Tooltip("Maximum number of nodes in a resource bundle.")]
-        [Min(1)]
-        public int maximumBundleSize;
-
-        [Tooltip("Maximum number of bundles this resource type can create.")]
-        [Min(1)]
-        public int maximumBundles;
-
-        [Tooltip("Maximum radius used when growing a bundle.")]
-        [Min(0f)]
-        public float bundleRadius;
-
-        [Tooltip("Preferred distance between nodes in the same bundle.")]
-        [Min(0.1f)]
-        public float nodeSpacing;
-
-        [Tooltip("Minimum distance between this resource's bundles and other resource bundles.")]
-        [Min(0f)]
-        public float minimumBundleSeparation;
-
-        [Header("Center Zone")]
-
-        [Tooltip(
-            "Allows this resource to have its first guaranteed bundle " +
-            "inside the center resource zone.")]
-        public bool allowedInCenterZone;
-
-        [Tooltip(
-            "Forces this resource to have at least one bundle inside " +
-            "the center resource zone.")]
-        public bool guaranteedCenterBundle;
-
-        [Tooltip(
-            "Prevents this resource from spawning inside the center " +
-            "resource zone.")]
-        public bool excludeFromCenterZone;
-    }
-
     private struct PlacedBundle
     {
         public Vector2 center;
@@ -86,133 +35,107 @@ public class SceneResourcesGenerator : MonoBehaviour
         }
     }
 
-    [Header("Resources")]
-    [Tooltip("Each entry represents one independently generated resource type.")]
-    [SerializeField]
-    private ResourceSpawnDefinition[] resources;
-
-    [Header("Scene Details")]
-    [Tooltip("Loaded from Resources/SceneDetailListSO when not assigned.")]
-    [SerializeField]
-    private SceneDetailListSO sceneDetailList;
-
-    [Header("Spawn Area")]
-    [SerializeField]
-    private Vector2 spawnAreaSize = new Vector2(240f, 165f);
-
-    [SerializeField]
-    private Vector2 spawnAreaCenter;
-
-    [Tooltip(
-        "Nothing can spawn inside this radius from the center. " +
-        "This is separate from the resource center zone.")]
-    [SerializeField, Min(0f)]
-    private float centerClearRadius = 12f;
-
-    [Header("Center Resource Zone")]
-    [Tooltip(
-        "Radius around the spawn center where Wood and Stone are guaranteed " +
-        "to have at least one bundle.")]
-    [SerializeField, Min(0f)]
-    private float centerResourceZoneRadius = 35f;
-
-    [Tooltip(
-        "Maximum attempts used when searching for a guaranteed center bundle.")]
-    [SerializeField, Min(1)]
-    private int centerBundlePlacementAttempts = 250;
-
-    [Tooltip(
-        "When enabled, Wood and Stone must have a bundle inside the center zone " +
-        "or generation will report a warning.")]
-    [SerializeField]
-    private bool requireCenterResources = true;
-
-    [Header("Resource Placement")]
-    [Tooltip(
-        "Additional physical clearance required when placing a resource node.")]
-    [SerializeField, Min(0f)]
-    private float resourceCollisionClearance = 0.2f;
-
-    [Tooltip(
-        "Fallback separation used when a resource has no per-resource value configured.")]
-    [SerializeField, Min(0f)]
-    [FormerlySerializedAs("minimumResourceBundleSeparation")]
-    private float defaultResourceBundleSeparation = 9f;
-
-    [Tooltip(
-    "Maximum number of attempts made when searching for a valid resource position.")]
-    [SerializeField, Min(1)]
-    private int maxPlacementAttemptsPerNode = 100;
-
-    [Tooltip("Layers considered when checking resource collisions.")]
-    [SerializeField]
-    private LayerMask blockingLayers = Physics2D.AllLayers;
-
+    [Header("Level")]
+    [SerializeField] private LevelSO level;
+    [SerializeField] private TerrainController terrainController;
     [Header("Generation")]
-    [SerializeField]
-    private bool generateOnStart = true;
+    [SerializeField] private bool generateOnStart = true;
+    [SerializeField] private bool overrideSeed;
+    [SerializeField] private int seedOverride = 1337;
 
-    [SerializeField]
-    private int randomSeed = 1337;
+    public LevelSO Level => level;
+    public int EffectiveSeed => overrideSeed ? seedOverride : level != null ? level.defaultSeed : 1337;
+    public TerrainController Terrain => terrainController;
+#if UNITY_EDITOR
+    // Editor buttons opt in; automated fixtures must not populate the user's Undo history.
+    public bool RecordGenerationUndo { get; set; }
+#endif
+    private ResourceSpawnRule[] resources => level.resourceSettings.resources;
+    private SceneDetailListSO sceneDetailList => level.detailSet;
+    private Vector2 spawnAreaSize => level.worldSize;
+    private Vector2 spawnAreaCenter => level.worldCenter;
+    private float centerClearRadius => level.centerSafeRadius;
+    private float centerResourceZoneRadius => level.resourceSettings.centerResourceZoneRadius;
+    private int centerBundlePlacementAttempts => Mathf.Max(1, level.resourceSettings.centerBundlePlacementAttempts);
+    private bool requireCenterResources => level.resourceSettings.requireCenterResources;
+    private float resourceCollisionClearance => level.resourceSettings.resourceCollisionClearance;
+    private float defaultResourceBundleSeparation => level.resourceSettings.defaultResourceBundleSeparation;
+    private int maxPlacementAttemptsPerNode => Mathf.Max(1, level.maxPlacementAttemptsPerNode);
+    private LayerMask blockingLayers => level.blockingLayers;
+    private const string resourcesParentName = "Resources";
+    private const string detailsParentName = "Scene Details";
+    private readonly List<Collider2D> detailCollisionResults = new List<Collider2D>(16);
 
-    [Tooltip(
-        "Remove previously generated resources and details before generating again.")]
-    [SerializeField]
-    private bool clearBeforeGenerate = true;
+    public void SetLevel(LevelSO definition, int? seed = null)
+    {
+        level = definition;
+        overrideSeed = seed.HasValue;
+        seedOverride = seed ?? 1337;
+        PreviewTerrain();
+    }
 
-    [Header("Generated Hierarchy")]
-    [SerializeField]
-    private string resourcesParentName = "Resources";
+    public void PreviewTerrain()
+    {
+        if (terrainController != null && level != null)
+            terrainController.ApplyLevel(level, EffectiveSeed, transform);
+    }
 
-    [SerializeField]
-    private string detailsParentName = "Scene Details";
+    private void OnEnable() => PreviewTerrain();
 
     private void Start()
     {
-        if (generateOnStart)
+        if (Application.isPlaying && generateOnStart)
         {
             GenerateResources();
         }
     }
 
-    [ContextMenu("Generate Resources and Details")]
-    public void GenerateResources()
+    [ContextMenu("Generate World")]
+    public void GenerateResources() => GenerateWorld(); // Preserve existing callers and UnityEvents.
+
+    public void GenerateWorld(int? seed = null)
     {
-        System.Random random =
-            new System.Random(randomSeed);
-
-        if (clearBeforeGenerate)
+        if (level == null)
         {
-            ClearGeneratedContent();
+            Debug.LogError("Assign a LevelSO before generating the world.", this);
+            return;
         }
-
-        GenerateResourceNodes(random);
-
+        if (!level.TryValidate(out string error))
+        {
+            Debug.LogError($"Cannot generate '{level.name}': {error}", this);
+            return; // Keep the previous world when the new configuration is invalid.
+        }
+        if (terrainController == null)
+        {
+            Debug.LogError("Assign the existing terrain's TerrainController.", this);
+            return;
+        }
+        int generationSeed = seed ?? EffectiveSeed;
+        terrainController.ApplyLevel(level, generationSeed, transform);
+        ClearGeneratedContent();
         Physics2D.SyncTransforms();
-
-        GenerateSceneDetails(random);
+        // Each detail family derives its own stream; resource RNG remains unchanged.
+        GenerateResourceNodes(new System.Random(generationSeed));
+        Physics2D.SyncTransforms();
+        GenerateSceneDetails(generationSeed);
+        Physics2D.SyncTransforms();
     }
 
-    [ContextMenu("Clear Generated Resources and Details")]
+    [ContextMenu("Clear Generated World")]
     public void ClearGeneratedContent()
     {
-        Transform resourcesParent =
-            transform.Find(resourcesParentName);
+        foreach (var root in GetComponentsInChildren<GeneratedWorldRoot>(true))
+            if (root.owner == this) DestroyGeneratedObject(root.gameObject);
+    }
 
-        if (resourcesParent != null)
-        {
-            DestroyGeneratedObject(
-                resourcesParent.gameObject);
-        }
-
-        Transform detailsParent =
-            transform.Find(detailsParentName);
-
-        if (detailsParent != null)
-        {
-            DestroyGeneratedObject(
-                detailsParent.gameObject);
-        }
+    private Transform GetGeneratedRoot()
+    {
+        foreach (var root in GetComponentsInChildren<GeneratedWorldRoot>(true))
+            if (root.owner == this) return root.transform;
+        var container = new GameObject("GeneratedWorld");
+        container.transform.SetParent(transform, false);
+        container.AddComponent<GeneratedWorldRoot>().owner = this;
+        return container.transform;
     }
 
     // ========================================================================
@@ -225,10 +148,6 @@ public class SceneResourcesGenerator : MonoBehaviour
         if (resources == null ||
             resources.Length == 0)
         {
-            Debug.LogWarning(
-                "No resource prefabs are configured.",
-                this);
-
             return;
         }
 
@@ -272,15 +191,18 @@ public class SceneResourcesGenerator : MonoBehaviour
          * Iron/Gold will automatically be kept outside the center zone
          * through their resource configuration.
          */
-        List<ResourceSpawnDefinition> placementOrder =
-            new List<ResourceSpawnDefinition>(resources);
+        List<ResourceSpawnRule> placementOrder =
+            new List<ResourceSpawnRule>(resources);
 
         // Reserve good locations for scarce resources first. Abundant
         // resources and details can then fill the remaining space naturally.
-        placementOrder.Sort(
-            (left, right) => left.amount.CompareTo(right.amount));
+        placementOrder.Sort((left, right) =>
+        {
+            int scarcity = left.amount.CompareTo(right.amount);
+            return scarcity != 0 ? scarcity : string.CompareOrdinal(left.resourceType.name, right.resourceType.name);
+        });
 
-        foreach (ResourceSpawnDefinition resource in placementOrder)
+        foreach (ResourceSpawnRule resource in placementOrder)
         {
             GenerateResourceType(
                 resource,
@@ -291,7 +213,7 @@ public class SceneResourcesGenerator : MonoBehaviour
     }
 
     private void GenerateGuaranteedCenterResources(
-        ResourceSpawnDefinition[] definitions,
+        ResourceSpawnRule[] definitions,
         Transform resourcesParent,
         System.Random random,
         List<PlacedBundle> occupiedResourceBundles)
@@ -299,7 +221,7 @@ public class SceneResourcesGenerator : MonoBehaviour
         /*
          * First pass explicitly searches for resources marked as guaranteed.
          */
-        foreach (ResourceSpawnDefinition resource in definitions)
+        foreach (ResourceSpawnRule resource in definitions)
         {
             if (!resource.guaranteedCenterBundle ||
                 resource.prefab == null ||
@@ -337,7 +259,7 @@ public class SceneResourcesGenerator : MonoBehaviour
     }
 
     private bool TryGenerateGuaranteedCenterBundle(
-        ResourceSpawnDefinition resource,
+        ResourceSpawnRule resource,
         Transform resourceParent,
         System.Random random,
         List<PlacedBundle> occupiedResourceBundles)
@@ -540,7 +462,7 @@ public class SceneResourcesGenerator : MonoBehaviour
     }
 
     private void GenerateResourceType(
-        ResourceSpawnDefinition resource,
+        ResourceSpawnRule resource,
         Transform resourcesParent,
         System.Random random,
         List<PlacedBundle> occupiedResourceBundles)
@@ -682,7 +604,7 @@ public class SceneResourcesGenerator : MonoBehaviour
     }
 
     private bool TryGenerateNormalResourceBundle(
-        ResourceSpawnDefinition resource,
+        ResourceSpawnRule resource,
         Transform resourceParent,
         System.Random random,
         List<PlacedBundle> occupiedResourceBundles,
@@ -817,47 +739,52 @@ public class SceneResourcesGenerator : MonoBehaviour
                 localPosition.y,
                 0f);
 
-        resourceNode.transform.localRotation =
-            Quaternion.identity;
+        resourceNode.transform.localRotation = Quaternion.identity;
+        Physics2D.SyncTransforms();
     }
 
     // ========================================================================
     // SCENE DETAILS
     // ========================================================================
 
-    private void GenerateSceneDetails(
-        System.Random random)
+    private void GenerateSceneDetails(int generationSeed)
     {
-        SceneDetailListSO details =
-            sceneDetailList != null
-                ? sceneDetailList
-                : Resources.Load<SceneDetailListSO>(
-                    nameof(SceneDetailListSO));
+        SceneDetailListSO details = sceneDetailList;
 
         if (details == null ||
             details.list == null ||
             details.list.Count == 0)
         {
-            Debug.LogWarning(
-                "No SceneDetailListSO is configured or available in Resources.",
-                this);
-
             return;
         }
 
         Transform detailsParent =
             GetOrCreateDetailsParent();
 
-        List<PlacedBundle> placedDetailBundles =
-            new List<PlacedBundle>();
-
+        var reservedDetailBundles = new List<PlacedBundle>();
+        var orderedDetails = new List<SceneDetailSO>();
+        var seenAssets = new HashSet<SceneDetailSO>();
+        var identifiers = new HashSet<string>(StringComparer.Ordinal);
         foreach (SceneDetailSO detail in details.list)
         {
+            if (detail == null || !seenAssets.Add(detail)) continue;
+            if (string.IsNullOrEmpty(detail.StableId) || !identifiers.Add(detail.StableId))
+            {
+                Debug.LogWarning($"Detail '{detail.name}' needs a unique saved stable ID. Validate the asset, or use Assign New Identity to Duplicated Family on a duplicate.", detail);
+                return; // Ambiguous identities must not make Inspector list order determine the winner.
+            }
+            orderedDetails.Add(detail);
+        }
+        orderedDetails.Sort(SceneDetailSO.CompareGenerationOrder);
+        foreach (SceneDetailSO detail in orderedDetails)
+        {
+            var random = new System.Random(detail.DeriveSeed(generationSeed));
+            if (!detail.Participates(random)) continue;
             GenerateDetailType(
                 detail,
                 detailsParent,
                 random,
-                placedDetailBundles);
+                reservedDetailBundles);
         }
     }
 
@@ -867,14 +794,19 @@ public class SceneResourcesGenerator : MonoBehaviour
         System.Random random,
         List<PlacedBundle> placedDetailBundles)
     {
+        int requestedAmount = detail == null ? 0 : Mathf.Max(0, Mathf.RoundToInt(detail.amount * level.detailDensity));
         if (detail == null ||
             detail.prefabs == null ||
             detail.prefabs.Count == 0 ||
-            detail.amount <= 0)
+            requestedAmount <= 0)
         {
             return;
         }
 
+        // Filter once per family. Missing variants must not count as successfully spawned details.
+        var validPrefabs = detail.prefabs.FindAll(prefab => prefab != null);
+        if (validPrefabs.Count == 0) return;
+        detailsParent = GetOrCreateResourceTypeParent(detailsParent, detail.detailName);
         int minimumBundleSize =
             detail.generateInBundles
                 ? Mathf.Max(
@@ -905,10 +837,10 @@ public class SceneResourcesGenerator : MonoBehaviour
         int bundleIndex = 0;
 
         while (spawnedAmount <
-               detail.amount)
+               requestedAmount)
         {
             int remainingAmount =
-                detail.amount -
+                requestedAmount -
                 spawnedAmount;
 
             int bundleSize =
@@ -923,20 +855,20 @@ public class SceneResourcesGenerator : MonoBehaviour
             {
                 return CanPlaceDetail(
                     position,
-                    detail.collisionClearance);
+                    detail);
             }
 
             if (!TryGetBundleCenter(
                     bundleRadius,
-                    detail.minimumBundleSeparation,
-                    placedDetailBundles,
+                    Mathf.Max(0, detail.minimumBundleSeparation),
+                    detail.reservesBundleSpace ? placedDetailBundles : null,
                     random,
                     CanPlaceDetailAt,
                     out Vector2 bundleCenter))
             {
                 LogPlacementWarning(
                     detail.detailName,
-                    detail.amount,
+                    requestedAmount,
                     spawnedAmount);
 
                 return;
@@ -951,6 +883,7 @@ public class SceneResourcesGenerator : MonoBehaviour
 
             SpawnDetail(
                 detail,
+                validPrefabs,
                 detailsParent,
                 bundleCenter,
                 bundleIndex,
@@ -980,6 +913,7 @@ public class SceneResourcesGenerator : MonoBehaviour
 
                 SpawnDetail(
                     detail,
+                    validPrefabs,
                     detailsParent,
                     localPosition,
                     bundleIndex,
@@ -989,10 +923,8 @@ public class SceneResourcesGenerator : MonoBehaviour
                 spawnedAmount++;
             }
 
-            placedDetailBundles.Add(
-                new PlacedBundle(
-                    bundleCenter,
-                    bundleRadius));
+            if (detail.reservesBundleSpace)
+                placedDetailBundles.Add(new PlacedBundle(bundleCenter, bundleRadius));
 
             bundleIndex++;
         }
@@ -1000,6 +932,7 @@ public class SceneResourcesGenerator : MonoBehaviour
 
     private void SpawnDetail(
         SceneDetailSO detail,
+        List<GameObject> validPrefabs,
         Transform detailsParent,
         Vector2 localPosition,
         int bundleIndex,
@@ -1008,7 +941,7 @@ public class SceneResourcesGenerator : MonoBehaviour
     {
         GameObject prefab =
             GetRandomPrefab(
-                detail.prefabs,
+                validPrefabs,
                 random);
 
         if (prefab == null)
@@ -1081,6 +1014,7 @@ public class SceneResourcesGenerator : MonoBehaviour
                     random.Next(0, 2) == 1;
             }
         }
+        Physics2D.SyncTransforms();
     }
 
     // ========================================================================
@@ -1233,7 +1167,7 @@ public class SceneResourcesGenerator : MonoBehaviour
 
     private bool CanPlaceDetail(
         Vector2 localPosition,
-        float clearance)
+        SceneDetailSO detail)
     {
         if (!IsInsideAllowedArea(
                 localPosition))
@@ -1241,16 +1175,33 @@ public class SceneResourcesGenerator : MonoBehaviour
             return false;
         }
 
-        Vector3 worldPosition =
-            transform.TransformPoint(
-                localPosition);
-
-        return Physics2D.OverlapCircle(
-            worldPosition,
-            Mathf.Max(
-                0f,
-                clearance),
-            blockingLayers) == null;
+        if (!detail.avoidResources && !detail.avoidBlockingObjects) return true;
+        var filter = new ContactFilter2D { useTriggers = true };
+        // Resource identity is independent of the blocking mask; a resource may live
+        // on a nonblocking layer and still need protection from large props.
+        filter.SetLayerMask(detail.avoidResources ? Physics2D.AllLayers : blockingLayers);
+        detailCollisionResults.Clear();
+        // Unity 6000.5 also gates explicit-filter overlap queries with this global
+        // setting. Scope the override to this synchronous query and always restore it.
+        bool previousTriggers = Physics2D.queriesHitTriggers;
+        try
+        {
+            Physics2D.queriesHitTriggers = true;
+            Physics2D.OverlapCircle(transform.TransformPoint(localPosition),
+                Mathf.Max(0, detail.collisionClearance), filter, detailCollisionResults);
+        }
+        finally { Physics2D.queriesHitTriggers = previousTriggers; }
+        foreach (Collider2D collider in detailCollisionResults)
+        {
+            if (collider.GetComponentInParent<ResourceNode>() != null)
+            {
+                if (detail.avoidResources) return false;
+                continue; // avoidBlockingObjects must not silently override avoidResources=false.
+            }
+            if (detail.avoidBlockingObjects && (blockingLayers.value & (1 << collider.gameObject.layer)) != 0)
+                return false;
+        }
+        return true;
     }
 
     // ========================================================================
@@ -1322,6 +1273,7 @@ public class SceneResourcesGenerator : MonoBehaviour
         float minimumSeparation,
         List<PlacedBundle> placedBundles)
     {
+        if (placedBundles == null) return true; // Non-reserving decorative composition.
         foreach (PlacedBundle bundle in placedBundles)
         {
             float requiredDistance =
@@ -1363,32 +1315,6 @@ public class SceneResourcesGenerator : MonoBehaviour
     // ========================================================================
     // RESOURCE HELPERS
     // ========================================================================
-
-    private static bool IsResourceNamed(
-        ResourceSpawnDefinition resource,
-        params string[] names)
-    {
-        if (resource.prefab == null)
-        {
-            return false;
-        }
-
-        string resourceName =
-            resource.prefab.name.Trim();
-
-        foreach (string name in names)
-        {
-            if (string.Equals(
-                    resourceName,
-                    name,
-                    StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
 
     private static int CountResourceNodes(
         Transform resourceParent)
@@ -1455,72 +1381,17 @@ public class SceneResourcesGenerator : MonoBehaviour
     // HIERARCHY
     // ========================================================================
 
-    private Transform GetOrCreateResourcesParent()
+    private Transform GetOrCreateResourcesParent() => GetOrCreateResourceTypeParent(GetGeneratedRoot(), resourcesParentName);
+    private Transform GetOrCreateDetailsParent() => GetOrCreateResourceTypeParent(GetGeneratedRoot(), detailsParentName);
+
+    private Transform GetOrCreateResourceTypeParent(Transform parent, string groupName)
     {
-        Transform existingParent =
-            transform.Find(
-                resourcesParentName);
-
-        if (existingParent != null)
-        {
-            return existingParent;
-        }
-
-        GameObject resourcesObject =
-            new GameObject(
-                resourcesParentName);
-
-        resourcesObject.transform.SetParent(
-            transform,
-            false);
-
-        return resourcesObject.transform;
-    }
-
-    private Transform GetOrCreateResourceTypeParent(
-        Transform resourcesParent,
-        string resourceName)
-    {
-        Transform existingParent =
-            resourcesParent.Find(
-                resourceName);
-
-        if (existingParent != null)
-        {
-            return existingParent;
-        }
-
-        GameObject resourceObject =
-            new GameObject(
-                resourceName);
-
-        resourceObject.transform.SetParent(
-            resourcesParent,
-            false);
-
-        return resourceObject.transform;
-    }
-
-    private Transform GetOrCreateDetailsParent()
-    {
-        Transform existingParent =
-            transform.Find(
-                detailsParentName);
-
-        if (existingParent != null)
-        {
-            return existingParent;
-        }
-
-        GameObject detailsObject =
-            new GameObject(
-                detailsParentName);
-
-        detailsObject.transform.SetParent(
-            transform,
-            false);
-
-        return detailsObject.transform;
+        // Direct child comparison also handles asset names containing '/'.
+        foreach (Transform child in parent)
+            if (child.name == groupName) return child;
+        var group = new GameObject(groupName);
+        group.transform.SetParent(parent, false);
+        return group.transform;
     }
 
     // ========================================================================
@@ -1539,13 +1410,19 @@ public class SceneResourcesGenerator : MonoBehaviour
         {
             // Destroy is deferred until the end of the frame. Detach first so
             // a same-frame regeneration cannot reuse a doomed hierarchy.
+            target.SetActive(false); // Remove colliders immediately, before deferred Destroy.
             target.transform.SetParent(null);
             target.name = $"{target.name} (Pending Destruction)";
             Destroy(target);
         }
         else
         {
+#if UNITY_EDITOR
+            if (RecordGenerationUndo) UnityEditor.Undo.DestroyObjectImmediate(target);
+            else DestroyImmediate(target);
+#else
             DestroyImmediate(target);
+#endif
         }
     }
 
@@ -1578,6 +1455,7 @@ public class SceneResourcesGenerator : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        if (level == null || level.resourceSettings == null) return;
         Vector3 worldCenter =
             transform.TransformPoint(
                 spawnAreaCenter);

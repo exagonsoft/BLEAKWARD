@@ -1,0 +1,4093 @@
+fileFormatVersion: 2
+guid: 20da6bfdf5ba7924a9f086ed9f1f9625
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5797905647966369884
+    second: Light the ward details_0
+  - first:
+      213: -4845885271711790522
+    second: Light the ward details_1
+  - first:
+      213: 1995816357385671710
+    second: Light the ward details_2
+  - first:
+      213: 6919151509273032118
+    second: Light the ward details_3
+  - first:
+      213: -783574699404490197
+    second: Light the ward details_4
+  - first:
+      213: 4050410829494555948
+    second: Light the ward details_5
+  - first:
+      213: 7301194723402177992
+    second: Light the ward details_6
+  - first:
+      213: 5409430117587476547
+    second: Light the ward details_7
+  - first:
+      213: 6527148476721792247
+    second: Light the ward details_8
+  - first:
+      213: -1727028684635324338
+    second: Light the ward details_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ward_Grass_Olive_01
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2486
+        width: 194
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bce180c3e7f2ac191cfc0b90cc3d9c
+      internalID: -1614742464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Rust_01
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2483
+        width: 191
+        height: 206
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab4514a71386ebd6e282289a9cfacd3
+      internalID: 1244334449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Olive_02
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2480
+        width: 166
+        height: 218
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30c4043d4db92281965aecd971712ae
+      internalID: -465942059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Olive_03
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 2461
+        width: 209
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6407efe17d710f6733d47d2bce829a63
+      internalID: 20594514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Dry_01
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2312
+        width: 192
+        height: 158
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9dcf5b04446dc6b58ab8187814a41a0
+      internalID: -1155364982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Rust_02
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 2290
+        width: 158
+        height: 185
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8828f6811c40bf480ac03ddbc74d568
+      internalID: 1766156856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Dry_02
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 2297
+        width: 184
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248caf68fe86302fd99bbe688a621075
+      internalID: 645468564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Rust_03
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 2297
+        width: 169
+        height: 176
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f235e1d5a58499ac7008cb857a77d114
+      internalID: -1308212003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Dry_03
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2110
+        width: 175
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e685ac3a16782a4689262c6f319b9ad8
+      internalID: 1638810852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Olive_04
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2073
+        width: 197
+        height: 205
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db93e35b0233d66b38bbc33f92cbd1f9
+      internalID: 1562349191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Dry_04
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2065
+        width: 202
+        height: 228
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a586351f0e4ed6c8a185803ba4decb56
+      internalID: -444013350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Dry_05
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 2086
+        width: 209
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c8418c246851773d8c823553bc5704
+      internalID: -407824104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Dry_06
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1862
+        width: 220
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc4440d1be05ba708273903c6142d3d
+      internalID: 787743627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Rust_04
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1888
+        width: 173
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f64fd7ed0ec3a59a66eab8b04ab4619
+      internalID: 1300507578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Rust_05
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1869
+        width: 190
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bbebc061a4fa94e97f4453c2e591de
+      internalID: -56130918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Grass_Olive_05
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1870
+        width: 214
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c67dc4f0ade3da9b57c7d6ca4fa9646
+      internalID: -776972364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Dead_01
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 2471
+        width: 198
+        height: 205
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d5e6df3c497dd2376e789847836f66
+      internalID: -774839561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Dead_02
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 2463
+        width: 244
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881f5cdb9b9619fe51b8748ba2ab8107
+      internalID: -391886654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Rust_01
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2464
+        width: 271
+        height: 221
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e765d48d46e247afd8a0a27ea63e852
+      internalID: -138089040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Rust_02
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 2227
+        width: 258
+        height: 230
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d2d1ee1db3d223454f4e1fb94df48c
+      internalID: 601294269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Olive_01
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 2224
+        width: 282
+        height: 236
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966d5c6206694e1e817d9744eb92868e
+      internalID: -1128080725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Rust_03
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 2226
+        width: 225
+        height: 229
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d639ca937d7854e250c121d20a360a31
+      internalID: -1195570873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Dead_03
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2020
+        width: 288
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b654a982cbe5114eb268f447178f45dd
+      internalID: 2104168349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Olive_02
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 2046
+        width: 264
+        height: 177
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cc6552532c155b0183be1f78c9c4f6
+      internalID: -777650487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Rust_04
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1852
+        width: 266
+        height: 167
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b596a41bf35fb059fdaf22b4439fdfa1
+      internalID: -842937401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Bush_Olive_03
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1844
+        width: 300
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e62411f7571f74acaf6b5e8d5df650
+      internalID: -955696198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_DeadTree_01
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2233
+        width: 355
+        height: 471
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ded324efcb014f813dbbd498b5c7b6
+      internalID: -1446652796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_DeadTree_02
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 2265
+        width: 244
+        height: 437
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f08127a2e4e77766d2582e18315318
+      internalID: 608019997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_DeadTree_03
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 2231
+        width: 315
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a37010991fbe1480778a0dfb60e8a8
+      internalID: 254049812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_DeadTree_04
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1836
+        width: 238
+        height: 378
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbc2c4434b40df32e5be4c5983b6a45
+      internalID: -1105031467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_DeadTree_05
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 2129
+        width: 150
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eec7103f2de75569c165747cf909690
+      internalID: 1739976712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Stump_01
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 2009
+        width: 194
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f692c28c7eacd2c04da73fa13d78a4
+      internalID: -1605947939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Stump_02
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 2090
+        width: 164
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b8d6fa0097ef8ba16ae0cf79868c03
+      internalID: -479150997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Stump_03
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 1836
+        width: 205
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c51b584f7ef048076de271d5af4fac
+      internalID: -1850188976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Stump_04
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 1845
+        width: 170
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116e821e15d87cef67a54a5915fae1a7
+      internalID: 881209523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Logs_01
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 2150
+        width: 388
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1091f5f0c2d7361efc0fef638f8175ed
+      internalID: -296098046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Logs_02
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1977
+        width: 514
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a439f9d99ab296b8a84ddbf05a52a8bf
+      internalID: -1939182076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Logs_03
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1828
+        width: 435
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb83da3333d5b602bb4a42769ca160f
+      internalID: -926317586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_01
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2508
+        width: 165
+        height: 149
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0b68c4b606c276ae1addc54cf18b13
+      internalID: 1429447666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_02
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 2506
+        width: 160
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1adcda798b1e59346836710f2a7d99e6
+      internalID: -876961783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_03
+      rect:
+        serializedVersion: 2
+        x: 2852
+        y: 2506
+        width: 188
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a819d66c18994a1e489f148ccf5206f6
+      internalID: -1518459589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_04
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2506
+        width: 190
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdf75ef1f208a01857dbd5e1070f390
+      internalID: -675374849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_05
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2346
+        width: 177
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bb4dbc3f24a3e9b954f80e9a4b4deb
+      internalID: 293304460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_06
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 2340
+        width: 175
+        height: 151
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd16d3d541810c583b825281f6c20827
+      internalID: -126307229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_07
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 2338
+        width: 192
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d0771827866884d7521707159d8785
+      internalID: -2058987294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_08
+      rect:
+        serializedVersion: 2
+        x: 3063
+        y: 2335
+        width: 192
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c2e69fc9d09dcc209a40557857ec97
+      internalID: 1500597583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_09
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 2152
+        width: 181
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba34d1b2a648371251cd6c61d5f8ec3
+      internalID: 731974296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_10
+      rect:
+        serializedVersion: 2
+        x: 2677
+        y: 2150
+        width: 177
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd754d9824c54a38ff07562b851d12a
+      internalID: 1923811007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_11
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 2152
+        width: 194
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874d2ff4f80e88ce71e79972e6cbf279
+      internalID: 1433022306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_12
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 2148
+        width: 222
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec016ba9cefd0d5e1ea1fa564ae750f
+      internalID: 568990779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_13
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1998
+        width: 166
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965cd598c438c6839d7eef6b2c4ff761
+      internalID: -1947064530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_14
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 1996
+        width: 173
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8320d50d5eed6f38f36310c375b6f85
+      internalID: 92293980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_15
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 1994
+        width: 181
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d2d51b450bf1775c171455433e3c4c
+      internalID: 1608442520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_16
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 1996
+        width: 220
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d025aa1a412187606ab694ae5d3ca27b
+      internalID: 1734139238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_17
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1841
+        width: 164
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d38a4f53ee66fa4cad9341126b5db42
+      internalID: 61393417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_18
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 1838
+        width: 192
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad9429ff5b9ded5208f7f351a055a6f
+      internalID: -1071906537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_19
+      rect:
+        serializedVersion: 2
+        x: 2867
+        y: 1841
+        width: 173
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3c0965bf86c78cc9a50a8d1ddefb18
+      internalID: 849674623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockSmall_20
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 1836
+        width: 211
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c943b76c3dab147d7c1671e674b30f
+      internalID: -1146768285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_01
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 2474
+        width: 267
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45284fbf61c51dac9af2386a978f4b8b
+      internalID: 1158013790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_02
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 2480
+        width: 241
+        height: 227
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f8fb844433a0932665a09f2bb1abf7
+      internalID: 997828126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_03
+      rect:
+        serializedVersion: 2
+        x: 3795
+        y: 2466
+        width: 286
+        height: 234
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d02dd1058cd0122a0c2ad97bb878a46
+      internalID: -1013313810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_04
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 2263
+        width: 269
+        height: 213
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57570bf3d9823e2a333caa17f94e5eb5
+      internalID: -2038217316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_05
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 2244
+        width: 280
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9341baea46b3fce74155922d6e4d2b
+      internalID: 978685089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_06
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 2299
+        width: 260
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081aeae24657783099e860d49aa0a5d5
+      internalID: 1213221760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_07
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 1866
+        width: 253
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789bd0d721c8e614b954753245f97e36
+      internalID: 715744386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_08
+      rect:
+        serializedVersion: 2
+        x: 3541
+        y: 2111
+        width: 278
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d896f1a9a3e4ad1509e80d9dc73a1160
+      internalID: -627652921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_09
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 2062
+        width: 261
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008df9147e211cd9ddfedc7c424a2666
+      internalID: -114033782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_10
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 1860
+        width: 227
+        height: 286
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b1abbc41e3ae6f247c2a80131e6bc6
+      internalID: -2131869747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_11
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 1862
+        width: 211
+        height: 247
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdaba65d89ba3e631b647185f0eb6a29
+      internalID: -1887900563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockLarge_12
+      rect:
+        serializedVersion: 2
+        x: 3895
+        y: 1860
+        width: 180
+        height: 205
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246543e67848f78d8461bf1984803eb8
+      internalID: -439353867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockFormation_01
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1438
+        width: 425
+        height: 371
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f963ac620cef745fd55b98a3458949c5
+      internalID: -1328419402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockFormation_02
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1440
+        width: 369
+        height: 371
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c738296fac4dad34daf23255db200bf5
+      internalID: -1243263942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockFormation_03
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1301
+        width: 248
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a647afc54efc30fae9401b1f8585e2
+      internalID: -78783975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockFormation_04
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1167
+        width: 322
+        height: 322
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4452f4cd84c0923c9b9d46a118d54c
+      internalID: -1606196249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RockFormation_05
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1002
+        width: 237
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c1658653d81a8e58dba1ff7319d310
+      internalID: 729759056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteSlab_01
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1062
+        width: 282
+        height: 361
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7f1f64c91f19163b2fecdaec3078e8
+      internalID: -306766607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteSlab_02
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1005
+        width: 352
+        height: 300
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fea5925e7e22c6d2718e1911d588e6
+      internalID: 1694068214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteRubble_01
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 992
+        width: 333
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f85f84e13fe54b925edcf64cf06354e
+      internalID: 114831221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteRubble_02
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 987
+        width: 231
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b58ae1967b3d0a8d99f89f455bc5914
+      internalID: -706848031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteRebar_01
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1531
+        width: 301
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11784b3e35537086a1f19fb7b0d7c6a5
+      internalID: 1658565047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteRebar_02
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1525
+        width: 265
+        height: 284
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c9cff9158ba9bd4be55300830eb8bb
+      internalID: -972942849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteColumn_01
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1512
+        width: 237
+        height: 299
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6386f7fdded6f56a8388ee2a9a2044
+      internalID: -1934331969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteSlab_03
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1292
+        width: 305
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7e8cafb44d7ef093fe1de670df24ef
+      internalID: 544467251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteBlocks_01
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1393
+        width: 166
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fa6a0e572b7febae14c77e389e369a
+      internalID: 1420664263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteColumn_02
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1301
+        width: 147
+        height: 239
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8e2863e4bf8e15dd74c2353c586ee9
+      internalID: -634131415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteColumn_03
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1256
+        width: 201
+        height: 290
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c70032924a5dedd2f6ae0f8ae93ad7
+      internalID: -1440652345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteBlocks_02
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1282
+        width: 194
+        height: 104
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda8eed87b97777a15eced33ca120f63
+      internalID: -2133880919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteRebar_03
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 990
+        width: 286
+        height: 302
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84444738ce290b4c156f76e6f45ac4f
+      internalID: 47439489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteSlab_04
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1015
+        width: 297
+        height: 267
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29773ef38aa46d15130c968fbe468ed9
+      internalID: -1614593148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteRebar_04
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1058
+        width: 241
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf0ceaca94f34099341b764847830b3
+      internalID: 1845245988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteBlocks_03
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 968
+        width: 307
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c291a50dec0fca231d1d3d6dc50156b
+      internalID: -1330833497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ScrapPile_01
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 1519
+        width: 414
+        height: 285
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd380299c6c9c3c4af42d1baf408c415
+      internalID: -1044455546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ScrapPile_02
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1510
+        width: 386
+        height: 299
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9747af0f94cef139b819af0e84280386
+      internalID: 244190147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ScrapPile_03
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1269
+        width: 412
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e59fb2f783c78310d209d5ba203ac3
+      internalID: 213084144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ScrapPile_04
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 1271
+        width: 386
+        height: 254
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d003504699b3c55f6516bb9389c8bfbb
+      internalID: 409155574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ScrapPile_05
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 975
+        width: 425
+        height: 298
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038ecefc00e22baf9ce2f7b84d3ed72d
+      internalID: 1327695217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ScrapPile_06
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 973
+        width: 386
+        height: 296
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2423a6412ee3642c21ab27c5970440
+      internalID: -271010186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeArch_01
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1604
+        width: 348
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadd72cbd0f85ddebf242f83a36ee72f
+      internalID: -1777190098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeBent_01
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1499
+        width: 375
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8832a5fc4f248b4b15eb8c6d2f47aa3
+      internalID: -55971361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeStraight_01
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 1655
+        width: 187
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a37ea0a6f8678083a53975ec07009
+      internalID: 1325684056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeElbow_01
+      rect:
+        serializedVersion: 2
+        x: 3053
+        y: 1638
+        width: 211
+        height: 158
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc77c76a660760db4acc9c7f9ee4de05
+      internalID: -325659352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeStraight_02
+      rect:
+        serializedVersion: 2
+        x: 2865
+        y: 1510
+        width: 190
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127f7d3c276c1d4c9e5b210a34dece7f
+      internalID: -116602063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeElbow_02
+      rect:
+        serializedVersion: 2
+        x: 3063
+        y: 1491
+        width: 201
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae12575d27a05b6417e51e0f942ccbb
+      internalID: 1407962651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeValve_01
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 1318
+        width: 264
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23b62301bd1fcaf29e99378571e2aee
+      internalID: -1267316111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeStraight_03
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 1342
+        width: 392
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f875ff83ed6fac2ef967a420f7e7619
+      internalID: 2074947345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CableCoil_01
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1103
+        width: 298
+        height: 219
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72789cd6ffaafeead800971983e299b2
+      internalID: -929245347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeBundle_01
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 1194
+        width: 318
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82182085b42a3675123064d52aff1543
+      internalID: -137848404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeElbow_03
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 1182
+        width: 185
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb416766f5d7d9e6cdb6dc1c10e47845
+      internalID: 1971530701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeBundle_02
+      rect:
+        serializedVersion: 2
+        x: 2475
+        y: 979
+        width: 345
+        height: 171
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee277685d1941775a41fa1d89beea41
+      internalID: 1524511028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CableCoil_02
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 962
+        width: 459
+        height: 258
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cd548576e53c8762ee481ecc790e04
+      internalID: 206266446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelRust_01
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 1533
+        width: 183
+        height: 261
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f34271d2cc8dac07c3f5670d9144069
+      internalID: -365892142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelBlue_01
+      rect:
+        serializedVersion: 2
+        x: 3492
+        y: 1533
+        width: 177
+        height: 261
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13876bd4d1e3b252040693d87d5839c8
+      internalID: -1012658057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelFallen_01
+      rect:
+        serializedVersion: 2
+        x: 3659
+        y: 1525
+        width: 236
+        height: 262
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd73d48c2d52d294bc9211ba43b82a7
+      internalID: 1204283008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelGreen_01
+      rect:
+        serializedVersion: 2
+        x: 3891
+        y: 1529
+        width: 179
+        height: 269
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7948fe9392dd1620e3ad9dad2adfb5
+      internalID: -393282773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_TankUpright_01
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 1209
+        width: 266
+        height: 329
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332f586169c16e69ca01719377b65cb1
+      internalID: 168089050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_TankFallen_01
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 1301
+        width: 497
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d997a53ed6d2c9014a97e3ab137f7bca
+      internalID: 1583675921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FuelCan_01
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 1147
+        width: 171
+        height: 182
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da559a1697a3cd909bcb5995b60c793
+      internalID: 56559014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelRust_02
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 1081
+        width: 166
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6344b0a234c3e1bd3c1722ef76e1b10
+      internalID: 2121678762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelYellow_01
+      rect:
+        serializedVersion: 2
+        x: 3883
+        y: 981
+        width: 200
+        height: 292
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c2a5733aaee477c4f6edf53778acf1
+      internalID: 2067350354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelFallen_02
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 981
+        width: 337
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d297576cac8a52e277f8df42d7d6c5
+      internalID: -24794376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelRust_03
+      rect:
+        serializedVersion: 2
+        x: 3625
+        y: 987
+        width: 189
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6743393c5baceab0d27e81cff48a8333
+      internalID: -545294667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrelRust_04
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1316
+        width: 128
+        height: 190
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6046a2392ec9daff2d3b7975c6ee0d
+      internalID: -293731250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateWood_01
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 706
+        width: 246
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33149c8e472aa1c6d7d32d066ea59457
+      internalID: 29149012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateGreen_01
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 700
+        width: 265
+        height: 245
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6084e9ffe1dc0c99801a1126ad4663f
+      internalID: -905722121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateOpen_01
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 648
+        width: 246
+        height: 305
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a851475ece04e1b36889200ee89cd1fd
+      internalID: -1876489506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateWood_02
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 496
+        width: 303
+        height: 218
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad3649bd51a68ba0249cb0a83c781bb
+      internalID: -1242368763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateGreen_02
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 604
+        width: 171
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5929c59ec1eaba9721983c573551e20a
+      internalID: 757859372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateGreen_03
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 456
+        width: 194
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f15305286e83eb2eb7fd79ff2f5fcb
+      internalID: -1963270733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateMetal_01
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 448
+        width: 290
+        height: 209
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a56d506c7ee9e44cc1e41e9d84f48c
+      internalID: 1781103316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CratesMetal_01
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 282
+        width: 279
+        height: 234
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6414c9b598f132115fb0fa8c2da59f
+      internalID: 883322759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateWood_03
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 273
+        width: 213
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80deba8c3a897c321d94ae91e648d1a
+      internalID: 1658631147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateOpen_02
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 239
+        width: 249
+        height: 213
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7320e4451bb62cdd1a64635c1b22a19
+      internalID: 1852659934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateWood_04
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 98
+        width: 243
+        height: 181
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0715a4c2e139d477719b8538da900ec7
+      internalID: 371053536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateGreen_04
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 96
+        width: 207
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e2ae2f1c4f1cdb66b265d89c4d1be0
+      internalID: 1829559921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateWood_05
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 102
+        width: 128
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef8302ef24d7df822af815ffb52a65f
+      internalID: 67694929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CrateWood_06
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 77
+        width: 214
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ce5f92f003b55aba9ffa50c61c78c6
+      internalID: 883797390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceWire_01
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 678
+        width: 335
+        height: 263
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30eaedc3fc820998461bbf58eca8e2e
+      internalID: -474963796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceWire_02
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 678
+        width: 248
+        height: 263
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaaa825de827f97e29c70e10b6162dd
+      internalID: 1003955305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceWood_01
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 702
+        width: 235
+        height: 243
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c48ea6d9d1abef03d3fc9414ec91532
+      internalID: 1228945590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceMetal_01
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 446
+        width: 313
+        height: 219
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d0a20435ca53e934193ea5c0f3e7fc
+      internalID: 767882658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceMetal_02
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 459
+        width: 273
+        height: 223
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dde14ff8d588aeb1d432b688c6d3fa
+      internalID: -1124462249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceWood_02
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 482
+        width: 213
+        height: 215
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ed7d0ff85f833619e54fc80aee167b
+      internalID: -616066926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrierConcrete_01
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 275
+        width: 322
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0a3473f2e3983654e53973b18fd0ac
+      internalID: 1927277952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarrierHazard_01
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 262
+        width: 250
+        height: 235
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b438cdf6a7296bfb99faffb6a0d4ae8
+      internalID: 932217053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_FenceWood_03
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 320
+        width: 201
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5138f9f7ad67c794f307601316aa046f
+      internalID: 524456145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Sandbags_01
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 105
+        width: 461
+        height: 191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d21ad7159f8aeec9403ed04b6e29276
+      internalID: -1641664807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_BarricadeWood_01
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 64
+        width: 328
+        height: 284
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d847c07456cdf7ce766d179251086a4
+      internalID: 1457415197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_MachineFan_01
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 674
+        width: 279
+        height: 279
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5065cde9f416ed55303be809de6ae58
+      internalID: -1370670202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_TankSmall_01
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 682
+        width: 145
+        height: 244
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e1e2ff28758eb070022ac1054b1b59
+      internalID: 116925585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_PipeLarge_01
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 674
+        width: 380
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7714a418a7678babbe55a41df4637769
+      internalID: 2067102737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_MachineBox_01
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 390
+        width: 390
+        height: 297
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa546ddc997480eadebb75c4362f0ff
+      internalID: -317287384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_MachineBox_02
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 456
+        width: 231
+        height: 231
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364bb3920ecd756b73ef93a867848adb
+      internalID: 161049450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_TankRust_01
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 109
+        width: 224
+        height: 337
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b88696b4689a3356a58cde2b89ddd65
+      internalID: 211985164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Pump_01
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 100
+        width: 215
+        height: 305
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df244a3b6c8cc0006440d1a82993906
+      internalID: -61069880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CableSpool_01
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 260
+        width: 213
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb696e1d43e49e5bd183b147aac7720
+      internalID: -1402095477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_VentTower_01
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 119
+        width: 177
+        height: 604
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdb67a3e0189fe6aaa550befb83ab1e
+      internalID: 2019010077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_MachineBox_03
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 90
+        width: 271
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb76034ac4036d79c16abc641125c80
+      internalID: -1672934385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CarWreck_01
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 674
+        width: 405
+        height: 275
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ae3383cc9f04ef422b7a491fa7cdcc
+      internalID: -758285230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Dumpster_01
+      rect:
+        serializedVersion: 2
+        x: 2867
+        y: 651
+        width: 406
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64115fad29179e7923557f61c9736d3
+      internalID: 956072470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CarWreck_02
+      rect:
+        serializedVersion: 2
+        x: 2605
+        y: 495
+        width: 390
+        height: 230
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ca35aeaa7c6d5547b656ef58c76148
+      internalID: -258040016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CarWreck_03
+      rect:
+        serializedVersion: 2
+        x: 2854
+        y: 354
+        width: 421
+        height: 284
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49246402689a746bbd0da660da362628
+      internalID: -301331488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Tires_01
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 380
+        width: 177
+        height: 221
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e683f635db5c94a791cb684968eb3d0e
+      internalID: 1725348280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_ConcreteDebris_01
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 369
+        width: 215
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7512a9dfc5cbefd2f882a5dab4c6d8a
+      internalID: -1697701397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_EngineWreck_01
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 102
+        width: 426
+        height: 282
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd7481b06742850a816a531b06def92
+      internalID: 511467299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_CarWreck_04
+      rect:
+        serializedVersion: 2
+        x: 2869
+        y: 90
+        width: 404
+        height: 270
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629be2a642785a4c7435d117e6f41b9f
+      internalID: -421982545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RuinFlag_01
+      rect:
+        serializedVersion: 2
+        x: 3292
+        y: 614
+        width: 369
+        height: 333
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76db485f9ce10e26d6ce56991cfac339
+      internalID: -475077830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_Watchtower_01
+      rect:
+        serializedVersion: 2
+        x: 3627
+        y: 290
+        width: 251
+        height: 651
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae0cc71301ee85dfed0afa3328bc92d
+      internalID: 1706106903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RuinColumn_01
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 407
+        width: 254
+        height: 549
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40956bf4ec92ea9cdb6372f09b892282
+      internalID: -656752902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RuinColumn_02
+      rect:
+        serializedVersion: 2
+        x: 3324
+        y: 316
+        width: 266
+        height: 332
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5627e51cb82b06393886f978a503046a
+      internalID: -1478937865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RuinWall_01
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 96
+        width: 297
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b63bf0881d6ab3cfb311aa44020a66
+      internalID: -2119511718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ward_RuinBuilding_01
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 81
+        width: 491
+        height: 365
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5edb954ca43199c86c3c52d10ea24e
+      internalID: -1219132185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f87de94a471aec744b451ab48e9956cd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ward_BarrelBlue_01: -1012658057
+      Ward_BarrelFallen_01: 1204283008
+      Ward_BarrelFallen_02: -24794376
+      Ward_BarrelGreen_01: -393282773
+      Ward_BarrelRust_01: -365892142
+      Ward_BarrelRust_02: 2121678762
+      Ward_BarrelRust_03: -545294667
+      Ward_BarrelRust_04: -293731250
+      Ward_BarrelYellow_01: 2067350354
+      Ward_BarricadeWood_01: 1457415197
+      Ward_BarrierConcrete_01: 1927277952
+      Ward_BarrierHazard_01: 932217053
+      Ward_Bush_Dead_01: -774839561
+      Ward_Bush_Dead_02: -391886654
+      Ward_Bush_Dead_03: 2104168349
+      Ward_Bush_Olive_01: -1128080725
+      Ward_Bush_Olive_02: -777650487
+      Ward_Bush_Olive_03: -955696198
+      Ward_Bush_Rust_01: -138089040
+      Ward_Bush_Rust_02: 601294269
+      Ward_Bush_Rust_03: -1195570873
+      Ward_Bush_Rust_04: -842937401
+      Ward_CableCoil_01: -929245347
+      Ward_CableCoil_02: 206266446
+      Ward_CableSpool_01: -1402095477
+      Ward_CarWreck_01: -758285230
+      Ward_CarWreck_02: -258040016
+      Ward_CarWreck_03: -301331488
+      Ward_CarWreck_04: -421982545
+      Ward_ConcreteBlocks_01: 1420664263
+      Ward_ConcreteBlocks_02: -2133880919
+      Ward_ConcreteBlocks_03: -1330833497
+      Ward_ConcreteColumn_01: -1934331969
+      Ward_ConcreteColumn_02: -634131415
+      Ward_ConcreteColumn_03: -1440652345
+      Ward_ConcreteDebris_01: -1697701397
+      Ward_ConcreteRebar_01: 1658565047
+      Ward_ConcreteRebar_02: -972942849
+      Ward_ConcreteRebar_03: 47439489
+      Ward_ConcreteRebar_04: 1845245988
+      Ward_ConcreteRubble_01: 114831221
+      Ward_ConcreteRubble_02: -706848031
+      Ward_ConcreteSlab_01: -306766607
+      Ward_ConcreteSlab_02: 1694068214
+      Ward_ConcreteSlab_03: 544467251
+      Ward_ConcreteSlab_04: -1614593148
+      Ward_CrateGreen_01: -905722121
+      Ward_CrateGreen_02: 757859372
+      Ward_CrateGreen_03: -1963270733
+      Ward_CrateGreen_04: 1829559921
+      Ward_CrateMetal_01: 1781103316
+      Ward_CrateOpen_01: -1876489506
+      Ward_CrateOpen_02: 1852659934
+      Ward_CrateWood_01: 29149012
+      Ward_CrateWood_02: -1242368763
+      Ward_CrateWood_03: 1658631147
+      Ward_CrateWood_04: 371053536
+      Ward_CrateWood_05: 67694929
+      Ward_CrateWood_06: 883797390
+      Ward_CratesMetal_01: 883322759
+      Ward_DeadTree_01: -1446652796
+      Ward_DeadTree_02: 608019997
+      Ward_DeadTree_03: 254049812
+      Ward_DeadTree_04: -1105031467
+      Ward_DeadTree_05: 1739976712
+      Ward_Dumpster_01: 956072470
+      Ward_EngineWreck_01: 511467299
+      Ward_FenceMetal_01: 767882658
+      Ward_FenceMetal_02: -1124462249
+      Ward_FenceWire_01: -474963796
+      Ward_FenceWire_02: 1003955305
+      Ward_FenceWood_01: 1228945590
+      Ward_FenceWood_02: -616066926
+      Ward_FenceWood_03: 524456145
+      Ward_FuelCan_01: 56559014
+      Ward_Grass_Dry_01: -1155364982
+      Ward_Grass_Dry_02: 645468564
+      Ward_Grass_Dry_03: 1638810852
+      Ward_Grass_Dry_04: -444013350
+      Ward_Grass_Dry_05: -407824104
+      Ward_Grass_Dry_06: 787743627
+      Ward_Grass_Olive_01: -1614742464
+      Ward_Grass_Olive_02: -465942059
+      Ward_Grass_Olive_03: 20594514
+      Ward_Grass_Olive_04: 1562349191
+      Ward_Grass_Olive_05: -776972364
+      Ward_Grass_Rust_01: 1244334449
+      Ward_Grass_Rust_02: 1766156856
+      Ward_Grass_Rust_03: -1308212003
+      Ward_Grass_Rust_04: 1300507578
+      Ward_Grass_Rust_05: -56130918
+      Ward_Logs_01: -296098046
+      Ward_Logs_02: -1939182076
+      Ward_Logs_03: -926317586
+      Ward_MachineBox_01: -317287384
+      Ward_MachineBox_02: 161049450
+      Ward_MachineBox_03: -1672934385
+      Ward_MachineFan_01: -1370670202
+      Ward_PipeArch_01: -1777190098
+      Ward_PipeBent_01: -55971361
+      Ward_PipeBundle_01: -137848404
+      Ward_PipeBundle_02: 1524511028
+      Ward_PipeElbow_01: -325659352
+      Ward_PipeElbow_02: 1407962651
+      Ward_PipeElbow_03: 1971530701
+      Ward_PipeLarge_01: 2067102737
+      Ward_PipeStraight_01: 1325684056
+      Ward_PipeStraight_02: -116602063
+      Ward_PipeStraight_03: 2074947345
+      Ward_PipeValve_01: -1267316111
+      Ward_Pump_01: -61069880
+      Ward_RockFormation_01: -1328419402
+      Ward_RockFormation_02: -1243263942
+      Ward_RockFormation_03: -78783975
+      Ward_RockFormation_04: -1606196249
+      Ward_RockFormation_05: 729759056
+      Ward_RockLarge_01: 1158013790
+      Ward_RockLarge_02: 997828126
+      Ward_RockLarge_03: -1013313810
+      Ward_RockLarge_04: -2038217316
+      Ward_RockLarge_05: 978685089
+      Ward_RockLarge_06: 1213221760
+      Ward_RockLarge_07: 715744386
+      Ward_RockLarge_08: -627652921
+      Ward_RockLarge_09: -114033782
+      Ward_RockLarge_10: -2131869747
+      Ward_RockLarge_11: -1887900563
+      Ward_RockLarge_12: -439353867
+      Ward_RockSmall_01: 1429447666
+      Ward_RockSmall_02: -876961783
+      Ward_RockSmall_03: -1518459589
+      Ward_RockSmall_04: -675374849
+      Ward_RockSmall_05: 293304460
+      Ward_RockSmall_06: -126307229
+      Ward_RockSmall_07: -2058987294
+      Ward_RockSmall_08: 1500597583
+      Ward_RockSmall_09: 731974296
+      Ward_RockSmall_10: 1923811007
+      Ward_RockSmall_11: 1433022306
+      Ward_RockSmall_12: 568990779
+      Ward_RockSmall_13: -1947064530
+      Ward_RockSmall_14: 92293980
+      Ward_RockSmall_15: 1608442520
+      Ward_RockSmall_16: 1734139238
+      Ward_RockSmall_17: 61393417
+      Ward_RockSmall_18: -1071906537
+      Ward_RockSmall_19: 849674623
+      Ward_RockSmall_20: -1146768285
+      Ward_RuinBuilding_01: -1219132185
+      Ward_RuinColumn_01: -656752902
+      Ward_RuinColumn_02: -1478937865
+      Ward_RuinFlag_01: -475077830
+      Ward_RuinWall_01: -2119511718
+      Ward_Sandbags_01: -1641664807
+      Ward_ScrapPile_01: -1044455546
+      Ward_ScrapPile_02: 244190147
+      Ward_ScrapPile_03: 213084144
+      Ward_ScrapPile_04: 409155574
+      Ward_ScrapPile_05: 1327695217
+      Ward_ScrapPile_06: -271010186
+      Ward_Stump_01: -1605947939
+      Ward_Stump_02: -479150997
+      Ward_Stump_03: -1850188976
+      Ward_Stump_04: 881209523
+      Ward_TankFallen_01: 1583675921
+      Ward_TankRust_01: 211985164
+      Ward_TankSmall_01: 116925585
+      Ward_TankUpright_01: 168089050
+      Ward_Tires_01: 1725348280
+      Ward_VentTower_01: 2019010077
+      Ward_Watchtower_01: 1706106903
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1a4e76d9b84bf3aa3d729f2c61e401, type: 3}
+  m_Name: LightTheWardSceneDetails_DeadWoodSO
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDetailSO
+  detailName: Light The Ward Scene Details DeadWood
+  stableId: 009390b460d44fd4a933dc7b2226aeeb
+  prefabs:
+  - {fileID: 3146312725080533330, guid: b6fb79fe24520bc499d56cfcbcebc921, type: 3}
+  - {fileID: 2903832569433014925, guid: 8090dea9b91ead24db8aa8af4aedb7fd, type: 3}
+  - {fileID: 4662198635033173346, guid: 6ca0a1ae4ea006f4b8b6e4718b29bb0d, type: 3}
+  - {fileID: 2404626402406046580, guid: ce4cee210248b82418530e52be02feba, type: 3}
+  - {fileID: 4747397241897958567, guid: 82cdab714677a5949a6cb6a05312cb15, type: 3}
+  - {fileID: 2282958395132849181, guid: 20259940300b8d342a56c9aefd19dbba, type: 3}
+  - {fileID: 5689099402450288387, guid: 1a80f8dc2ed939049b5a9ac6ba5785c4, type: 3}
+  - {fileID: 5779473679765698019, guid: 5f165db437c26284c84cfdaa7688c1fa, type: 3}
+  - {fileID: 8928915885315475473, guid: 732fffaa88693f646a83d49ed0a68167, type: 3}
+  - {fileID: 1005100879740177800, guid: a607175835cb0474485d86edaeb8ce2d, type: 3}
+  - {fileID: 7520211793076983141, guid: 64b0ab499016b39499b1f50ea70820c2, type: 3}
+  amount: 150
+  generationChance: 0.605
+  placementLayer: 2
+  reservesBundleSpace: 0
+  avoidResources: 1
+  avoidBlockingObjects: 1
+  generateInBundles: 1
+  minimumBundleSize: 4
+  maximumBundleSize: 12
+  bundleRadius: 2
+  nodeSpacing: 2
+  collisionClearance: 0.25
+  minimumBundleSeparation: 2
+  scaleRange: {x: 1, y: 1.15}
+  rotationRange: {x: -5, y: 5}
+  randomFlipX: 1
+  randomFlipY: 0

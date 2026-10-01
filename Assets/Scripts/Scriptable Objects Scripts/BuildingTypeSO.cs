@@ -11,6 +11,7 @@ public class BuildingTypeSO : ScriptableObject
     public ResourceGeneratorData resourceGeneratorData;
     public ResourceAmmount[] constructionResourceCosts;
     public float healthAmountMax;
+    public float constructionTimerMax;
 
     public string GetConstructionResources()
     {

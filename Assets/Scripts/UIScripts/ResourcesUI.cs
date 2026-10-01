@@ -9,6 +9,7 @@ public class ResourcesUI : MonoBehaviour
     private ResourceTypeListSO resourceTypeList;
     private Dictionary<ResourceTypeSO, Transform> resourceTypeTransformDictionary;
     [SerializeField] private Transform resourceTemplate;
+    [SerializeField] private Transform resourceContainer;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class ResourcesUI : MonoBehaviour
             resourceTemplate.Find("Icon").GetComponent<Image>().sprite = resourceType.resourceSprite;
             int resourceAmount = ResourceManger.Instance.GetResourceAmount(resourceType);
             resourceTemplate.Find("Label").GetComponent<TextMeshProUGUI>().text = resourceAmount.ToString();
-            Transform resourceTransform = Instantiate(resourceTemplate, transform);
+            Transform resourceTransform = Instantiate(resourceTemplate, resourceContainer);
             resourceTransform.gameObject.SetActive(true);
             resourceTypeTransformDictionary[resourceType] = resourceTransform;
         }

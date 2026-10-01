@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb3ecc431d664240bd93ca9eb2a9ecc, type: 3}
+  m_Name: LVL_LightTheWard
+  m_EditorClassIdentifier: 
+  levelName: LightTheWard
+  levelId: light-the-ward
+  defaultSeed: 1337
+  worldSize: {x: 240, y: 165}
+  worldCenter: {x: 0, y: 0}
+  centerSafeRadius: 10
+  terrainBorder: 10
+  terrain: {fileID: 11400000, guid: c9f89e68d8844402bbb9cd3ffd8b23c6, type: 2}
+  detailSet: {fileID: 11400000, guid: 8a65c44dc643bcf4e91d6be32db762b2, type: 2}
+  detailDensity: 3
+  resourceSettings: {fileID: 11400000, guid: 0c7bc6a3acb14c089dd79a07f25043c6, type: 2}
+  maxPlacementAttemptsPerNode: 500
+  blockingLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295

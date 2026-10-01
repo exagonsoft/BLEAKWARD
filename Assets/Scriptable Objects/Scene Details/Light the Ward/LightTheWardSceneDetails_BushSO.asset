@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1a4e76d9b84bf3aa3d729f2c61e401, type: 3}
+  m_Name: LightTheWardSceneDetails_BushSO
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDetailSO
+  detailName: Light the Ward Bushes
+  stableId: 2ceca1ade2dd4b7d8b3927f3828b853a
+  prefabs:
+  - {fileID: 7553062575861158418, guid: 538eeae23fa08644cbab10c4c7a65bdb, type: 3}
+  - {fileID: 7803874726036539688, guid: b651897fc6323934b8d2113e4f9bb5ae, type: 3}
+  - {fileID: 8376352234454193134, guid: 761106eb4335733488af74cdc644505a, type: 3}
+  - {fileID: 1430247369014333065, guid: 29607754b53bcab4b9a0330b2a22ab8b, type: 3}
+  - {fileID: 4254000023256040105, guid: e646ab865b39e154eb38c2c3fc39baa7, type: 3}
+  - {fileID: 8130072810542605908, guid: 95c31ee9e44f5aa4daec90393a7dc1e3, type: 3}
+  - {fileID: 5718970844971522209, guid: 8e620647e9cbcfb4bafa198bfba798ca, type: 3}
+  - {fileID: 746198199457953144, guid: 0442d0368b5ed254abf1a2785ff56f11, type: 3}
+  - {fileID: 6522395223111437979, guid: b18ae04219d793247ab6d2af3c2bbeff, type: 3}
+  - {fileID: 1815096681798933614, guid: 7d598dd997d637a4e927f8c58a14b45b, type: 3}
+  amount: 860
+  generationChance: 1
+  placementLayer: 0
+  reservesBundleSpace: 0
+  avoidResources: 1
+  avoidBlockingObjects: 1
+  generateInBundles: 1
+  minimumBundleSize: 4
+  maximumBundleSize: 9
+  bundleRadius: 3
+  nodeSpacing: 0.8
+  collisionClearance: 0.25
+  minimumBundleSeparation: 1.5
+  scaleRange: {x: 1, y: 1.18}
+  rotationRange: {x: -3, y: 3}
+  randomFlipX: 1
+  randomFlipY: 0

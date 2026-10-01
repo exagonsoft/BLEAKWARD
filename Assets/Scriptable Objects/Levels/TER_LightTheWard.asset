@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74949ebfeb8c764d980f7b1c3c28c9f, type: 3}
+  m_Name: TER_LightTheWard
+  m_EditorClassIdentifier: 
+  terrainA: {fileID: 2800000, guid: 313ed73986b2f184798abb7e2caa3218, type: 3}
+  terrainB: {fileID: 2800000, guid: e7dfdbf8b6ef23043b7f5fd825adf0fc, type: 3}
+  terrainC: {fileID: 2800000, guid: 851df25300edd6a44982f040cdff35ad, type: 3}
+  terrainD: {fileID: 2800000, guid: 3a7ed626c0f1444419d6391e3e913b3e, type: 3}
+  baseTiling: 0.195
+  brightness: 1.8
+  saturation: 1
+  contrast: 1
+  macroScale: 0.2
+  macroStrength: 1
+  blendSoftness: 0.5
+  macroColorA: {r: 0.49019608, g: 0.46666667, b: 0.29411766, a: 1}
+  macroColorB: {r: 0.4117647, g: 0.34117648, b: 0.24705882, a: 1}
+  macroColorScale: 0.1
+  macroColorStrength: 0.311
+  detailTexture: {fileID: 2800000, guid: dea7a15bc1aafe84684caf870f57fa14, type: 3}
+  detailTiling: 1
+  detailStrength: 0.3

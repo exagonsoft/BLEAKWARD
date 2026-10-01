@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingTypeSO
   buildingName: MachineGun Tower
   buildingPrefab: {fileID: 1306339390990453113, guid: dddadb2fd98ee004ebd4d13b7623f3e5, type: 3}
-  sprite: {fileID: 21300000, guid: 1914340a5331de84ba59fba1ee9e53d4, type: 3}
+  sprite: {fileID: 21300000, guid: 9dedc37771f3b0d4598d2c0b718bcfca, type: 3}
   minConstructionRadius: 0
   isResourceGenerator: 0
   resourceGeneratorData:
@@ -29,3 +29,4 @@ MonoBehaviour:
   - resourceType: {fileID: 11400000, guid: b45c5bb4335f5bf4caab08202d687031, type: 2}
     ammount: 50
   healthAmountMax: 100
+  constructionTimerMax: 5

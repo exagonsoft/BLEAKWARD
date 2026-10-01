@@ -3,7 +3,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     private Enemy targetEnemy;
-    [SerializeField] private float targetLookRadius = 20f;
+    [SerializeField] private float targetLookRadius = 30f;
     [SerializeField] private Transform turretGunTransform;
     [SerializeField] private Transform turretBase;
     [SerializeField] private Transform turretBaseLeft;

@@ -59,7 +59,8 @@ public class BuildingManager : MonoBehaviour
                     if (ResourceManger.Instance.CanAfford(activeBuildingType.constructionResourceCosts))
                     {
                         ResourceManger.Instance.SpendResources(activeBuildingType.constructionResourceCosts);
-                        Instantiate(activeBuildingType.buildingPrefab, UtilsClass.GetMouseWorldPosition(), Quaternion.identity);
+                        //Instantiate(activeBuildingType.buildingPrefab, UtilsClass.GetMouseWorldPosition(), Quaternion.identity);
+                        UnderBuildingConstruction.Create(UtilsClass.GetMouseWorldPosition(), activeBuildingType);
                         Vector2 buildingColliderArea = activeBuildingType.buildingPrefab.GetComponent<BoxCollider2D>().size;
                         Collider2D[] detailColliders = Physics2D.OverlapBoxAll(UtilsClass.GetMouseWorldPosition(), buildingColliderArea, 0f);
                         foreach (Collider2D detailCollider2D in detailColliders)
@@ -113,7 +114,8 @@ public class BuildingManager : MonoBehaviour
         foreach (Collider2D collider2D in collider2DArray)
         {
             collider2D.TryGetComponent<DetailNode>(out DetailNode detailNode);
-            if (detailNode != null)
+            collider2D.TryGetComponent<Proyectil>(out Proyectil proyectil);
+            if (detailNode != null || proyectil != null)
             {
                 continue;
             }

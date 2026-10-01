@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6545efb641e198740b7c0604ddf916a9, type: 3}
+  m_Name: RES_LightTheWard
+  m_EditorClassIdentifier: 
+  resources:
+  - resourceType: {fileID: 11400000, guid: 1fc5e6b333fa7924faf7e56e6344048f, type: 2}
+    prefab: {fileID: 6027698839645420388, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
+    amount: 220
+    minimumBundleSize: 5
+    maximumBundleSize: 10
+    maximumBundles: 40
+    bundleRadius: 3.5
+    nodeSpacing: 1.05
+    minimumBundleSeparation: 7
+    allowedInCenterZone: 1
+    guaranteedCenterBundle: 1
+    excludeFromCenterZone: 0
+  - resourceType: {fileID: 11400000, guid: b45c5bb4335f5bf4caab08202d687031, type: 2}
+    prefab: {fileID: 8870884169029204051, guid: 33a42ecff549e2544b87418c18be1b75, type: 3}
+    amount: 110
+    minimumBundleSize: 3
+    maximumBundleSize: 7
+    maximumBundles: 28
+    bundleRadius: 3
+    nodeSpacing: 1.4
+    minimumBundleSeparation: 8
+    allowedInCenterZone: 1
+    guaranteedCenterBundle: 1
+    excludeFromCenterZone: 0
+  - resourceType: {fileID: 11400000, guid: 7d1d2fd6704f2274b8aa9ee15920b549, type: 2}
+    prefab: {fileID: 8870884169029204051, guid: 66bfb9beca1684c438c18b4e17d7df2d, type: 3}
+    amount: 60
+    minimumBundleSize: 3
+    maximumBundleSize: 5
+    maximumBundles: 22
+    bundleRadius: 2.25
+    nodeSpacing: 1.25
+    minimumBundleSeparation: 10
+    allowedInCenterZone: 0
+    guaranteedCenterBundle: 0
+    excludeFromCenterZone: 1
+  - resourceType: {fileID: 11400000, guid: 7f353e08d1865a24c87f6d23f058c560, type: 2}
+    prefab: {fileID: 8870884169029204051, guid: f06b599207a999d4fb3cdf764530722c, type: 3}
+    amount: 24
+    minimumBundleSize: 2
+    maximumBundleSize: 3
+    maximumBundles: 14
+    bundleRadius: 1.75
+    nodeSpacing: 1
+    minimumBundleSeparation: 13
+    allowedInCenterZone: 0
+    guaranteedCenterBundle: 0
+    excludeFromCenterZone: 1
+  centerResourceZoneRadius: 34
+  centerBundlePlacementAttempts: 500
+  requireCenterResources: 1
+  resourceCollisionClearance: 0.2
+  defaultResourceBundleSeparation: 8

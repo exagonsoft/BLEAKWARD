@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1a4e76d9b84bf3aa3d729f2c61e401, type: 3}
+  m_Name: LightTheWardSceneDetails_SmallrocksSO
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDetailSO
+  detailName: Light The Ward Small Rocks
+  stableId: 441de5915da64147a5952324f06fcf48
+  prefabs:
+  - {fileID: 93829123769187787, guid: 5a86d4888d10afc478e164622635253b, type: 3}
+  - {fileID: 4901443745528556121, guid: ed70c1d4f1c633f49b91d8e844a8e5f8, type: 3}
+  - {fileID: 6988583113730356105, guid: 71b13ae2e03b90f4fb4bc60245a077ff, type: 3}
+  - {fileID: 7722816699376230213, guid: 9ddb6b5fafd065a4da84ca79fcc94f1f, type: 3}
+  - {fileID: 5142216500440708172, guid: 63d393179323f654a81ed26ced112f8d, type: 3}
+  - {fileID: 3180291193908607070, guid: e9621ce856bda24448d39eeee1754f95, type: 3}
+  - {fileID: 8286209769751700005, guid: 32d78dcd0c0da25488420b061be42ba4, type: 3}
+  - {fileID: 4365950062078801422, guid: a1b0ec8eadc0ace4ba2807653336127e, type: 3}
+  - {fileID: 6906133339153797642, guid: bd76ed9cb4c48894a8479977742c97d8, type: 3}
+  - {fileID: 2924207686974282736, guid: be27c3b3060a58c4d92b4d0424518c60, type: 3}
+  - {fileID: 1816181253415089946, guid: fd0e94bf0ce29b6408a06268490eb3e9, type: 3}
+  - {fileID: 2240402915709915405, guid: 45961e438d09689479e9da00469d8861, type: 3}
+  - {fileID: 696127631453931341, guid: e703379e133851748b2518a03dc7b98b, type: 3}
+  - {fileID: 6434065837575657141, guid: dd5de0de201c76f428424e1c6bc46646, type: 3}
+  - {fileID: 473082053526533904, guid: bf12833353f9030449eeba503168c1cc, type: 3}
+  - {fileID: 762788104699218298, guid: 31610fe8231f58a449fdd7827787ce0b, type: 3}
+  - {fileID: 904747201871695228, guid: ea45a853ddb8510498923d3ddd26eb25, type: 3}
+  - {fileID: 1477522209065095438, guid: d0ab2352887fcb94a8969a3076994f85, type: 3}
+  - {fileID: 5779302034364745993, guid: 95f028b003414a14c87f23285191f177, type: 3}
+  - {fileID: 2167002334313835316, guid: 44c10cde43d2a4042af235dc543730f6, type: 3}
+  amount: 1600
+  generationChance: 1
+  placementLayer: 0
+  reservesBundleSpace: 0
+  avoidResources: 1
+  avoidBlockingObjects: 1
+  generateInBundles: 1
+  minimumBundleSize: 2
+  maximumBundleSize: 6
+  bundleRadius: 2.5
+  nodeSpacing: 0.8
+  collisionClearance: 0.25
+  minimumBundleSeparation: 2
+  scaleRange: {x: 0.65, y: 0.85}
+  rotationRange: {x: -5, y: 5}
+  randomFlipX: 1
+  randomFlipY: 0

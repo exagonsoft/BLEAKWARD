@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1a4e76d9b84bf3aa3d729f2c61e401, type: 3}
+  m_Name: LightTheWardSceneDetails_DebrisSO
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDetailSO
+  detailName: Light The Ward Debris Metal
+  stableId: 7125e11265c0443aa590393d55b97994
+  prefabs:
+  - {fileID: 5172811666977979579, guid: 4c8d9eab56b70ad4bbe6723b486232f4, type: 3}
+  - {fileID: 6968415748897505782, guid: 413cbfcda409a7849830f92a1b361215, type: 3}
+  - {fileID: 4663148963577225664, guid: 3358abc61ac7d6b44a4a2eb44fb58b74, type: 3}
+  - {fileID: 1240692985332073527, guid: 249f0e19478e7444192641310ed27ca0, type: 3}
+  - {fileID: 2500096536182911755, guid: ea3d189ef9a0c544f9bbf3f31d173259, type: 3}
+  - {fileID: 5122431362239029106, guid: dd80cd20cbc238847932d042efd2a770, type: 3}
+  amount: 360
+  generationChance: 1
+  placementLayer: 1
+  reservesBundleSpace: 0
+  avoidResources: 1
+  avoidBlockingObjects: 1
+  generateInBundles: 1
+  minimumBundleSize: 4
+  maximumBundleSize: 9
+  bundleRadius: 3
+  nodeSpacing: 0.8
+  collisionClearance: 0.25
+  minimumBundleSeparation: 1.5
+  scaleRange: {x: 0.85, y: 0.95}
+  rotationRange: {x: -5, y: 5}
+  randomFlipX: 1
+  randomFlipY: 0

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74949ebfeb8c764d980f7b1c3c28c9f, type: 3}
+  m_Name: TER_IndustrialTest
+  m_EditorClassIdentifier: 
+  terrainA: {fileID: 2800000, guid: 5829891427e2d724f8317753adc37201, type: 3}
+  terrainB: {fileID: 2800000, guid: c87d62b9f77c1034c89f743f045c2e8d, type: 3}
+  terrainC: {fileID: 2800000, guid: 793a2839c4d25674b9f158e34b4fa5e3, type: 3}
+  terrainD: {fileID: 2800000, guid: 7711b0f375bd1774cb82496c1ad07c1c, type: 3}
+  baseTiling: 0.12
+  brightness: 0.72
+  saturation: 0.15
+  contrast: 0.9
+  macroScale: 0.035
+  macroStrength: 0.8
+  blendSoftness: 0.32
+  macroColorA: {r: 0.55, g: 0.6, b: 0.64, a: 1}
+  macroColorB: {r: 0.45, g: 0.43, b: 0.4, a: 1}
+  macroColorScale: 0.012
+  macroColorStrength: 0.3
+  detailTexture: {fileID: 0}
+  detailTiling: 0.6
+  detailStrength: 0.06

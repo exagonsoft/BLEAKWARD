@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 693766709904768839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.927, y: 0.052000046, z: 0}
+  m_LocalPosition: {x: 2.05, y: -0.07, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -198,8 +198,8 @@ Transform:
   m_GameObject: {fileID: 3272378942962382339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.031, y: 0.0924, z: 0}
-  m_LocalScale: {x: 1.8, y: 1, z: 1}
+  m_LocalPosition: {x: -0.08, y: -0.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6334565111744335829}
@@ -251,14 +251,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 1fcf52891d00dee40a10f7ad9fbdca37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c8f2b252d12e694ea7c6e3316fa4891, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
-  m_Size: {x: 1, y: 0.96904606}
+  m_DrawMode: 0
+  m_Size: {x: 1.2733022, y: 0.96904606}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ed094130f5578429a860847e5a3728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  targetLookRadius: 15
+  targetLookRadius: 25
   turretGunTransform: {fileID: 6767555154341348774}
   turretBase: {fileID: 6334565111744335829}
   turretBaseLeft: {fileID: 1576606095800354843}
@@ -482,6 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7389712267618811713}
   - component: {fileID: 4066501928512226007}
+  - component: {fileID: 4266742722893841364}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -498,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 5610161323713948022}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -554,7 +555,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: d43cc9e57b2e79940852c18aefa988d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77941fb1114dd0344a6623fb2396ef8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -565,6 +566,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &4266742722893841364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610161323713948022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3602d1f84272347981cd1ff4d16512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SritePositionSortingOrder
+  runOnce: 1
+  positionOffsetY: -5
+  presitionSortingOrder: 5
 --- !u!1 &6285615158288945410
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +662,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 1914340a5331de84ba59fba1ee9e53d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d625238c0c7f3124cbba3b819f232e83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -671,7 +687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2553698016333741799, guid: 6ab6506f11297b5408cb7013df12bc6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.64
+      value: 4.37
       objectReference: {fileID: 0}
     - target: {fileID: 2553698016333741799, guid: 6ab6506f11297b5408cb7013df12bc6b, type: 3}
       propertyPath: m_LocalPosition.z

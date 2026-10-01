@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingTypeSO
   buildingName: Wood Harvester
   buildingPrefab: {fileID: 1306339390990453113, guid: 8c9d0ae0cf0580749931e9d88eeacb2c, type: 3}
-  sprite: {fileID: 21300000, guid: 908d3e09a32530c44ab23c9a2dd9036f, type: 3}
+  sprite: {fileID: 21300000, guid: f2a210e4f6eac4b48bd3331a181a80b5, type: 3}
   minConstructionRadius: 7
   isResourceGenerator: 1
   resourceGeneratorData:
@@ -27,3 +27,4 @@ MonoBehaviour:
   - resourceType: {fileID: 11400000, guid: 1fc5e6b333fa7924faf7e56e6344048f, type: 2}
     ammount: 25
   healthAmountMax: 100
+  constructionTimerMax: 5

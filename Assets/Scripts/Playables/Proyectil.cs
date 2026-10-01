@@ -14,8 +14,9 @@ public class Proyectil : MonoBehaviour
 
     private Enemy targetEnemy;
     private Vector3 lastMoveDir;
-    private float moveSpeed = 10f;
-    private float lifeTime = 2f;
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float lifeTime = 2f;
+    [SerializeField] private float damageAmount = 10f;
 
     private void Update()
     {
@@ -52,7 +53,7 @@ public class Proyectil : MonoBehaviour
             HealthSystem healthSystem = enemy.GetComponent<HealthSystem>();
             if (healthSystem != null)
             {
-                healthSystem.Damage(10);
+                healthSystem.Damage(damageAmount);
             }
             Destroy(gameObject);
         }
