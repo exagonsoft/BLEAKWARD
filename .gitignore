@@ -77,4 +77,9 @@ crashlytics-build.properties
 /.Aura
 /Temp
 /GeneratedAssets
+/.claude
+/BLEAKWARD_AudioPack
+/GeneratedAssets
+/tools
+/Temp
 

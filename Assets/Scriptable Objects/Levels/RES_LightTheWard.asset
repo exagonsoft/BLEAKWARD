@@ -15,7 +15,7 @@ MonoBehaviour:
   resources:
   - resourceType: {fileID: 11400000, guid: 1fc5e6b333fa7924faf7e56e6344048f, type: 2}
     prefab: {fileID: 6027698839645420388, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
-    amount: 220
+    amount: 300
     minimumBundleSize: 5
     maximumBundleSize: 10
     maximumBundles: 40
@@ -23,7 +23,7 @@ MonoBehaviour:
     nodeSpacing: 1.05
     minimumBundleSeparation: 7
     allowedInCenterZone: 1
-    guaranteedCenterBundle: 1
+    guaranteedCenterBundle: 0
     excludeFromCenterZone: 0
   - resourceType: {fileID: 11400000, guid: b45c5bb4335f5bf4caab08202d687031, type: 2}
     prefab: {fileID: 8870884169029204051, guid: 33a42ecff549e2544b87418c18be1b75, type: 3}

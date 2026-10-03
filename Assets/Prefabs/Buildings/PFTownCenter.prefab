@@ -304,7 +304,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 105
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 4bda8732d05859448b93abd7526ea6ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SritePositionSortingOrder
   runOnce: 1
   positionOffsetY: -5
-  presitionSortingOrder: 5
+  presitionSortingOrder: 100
 --- !u!114 &8502234353874916424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
   m_ShadowGroup: 0
-  m_Priority: 5
+  m_Priority: 105
   m_ComponentVersion: 6
   m_HasRenderer: 1
   m_UseRendererSilhouette: 1
@@ -426,7 +426,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 120490820502869336, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 120490820502869336, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 4763601521775097087}
     - target: {fileID: 398087056991471683, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 398087056991471683, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220496574991239893, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4220496574991239893, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -498,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885960256629040842, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6885960256629040842, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -617,7 +617,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 120490820502869336, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 120490820502869336, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -637,7 +637,7 @@ PrefabInstance:
       objectReference: {fileID: 7171274498197937317}
     - target: {fileID: 398087056991471683, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 398087056991471683, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -661,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220496574991239893, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4220496574991239893, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -689,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885960256629040842, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6885960256629040842, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -841,7 +841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 120490820502869336, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 120490820502869336, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -861,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 7387238655803295447}
     - target: {fileID: 398087056991471683, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 398087056991471683, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -885,7 +885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220496574991239893, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4220496574991239893, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge
@@ -913,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885960256629040842, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_Priority
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6885960256629040842, guid: de62b4bb2dd95d64eabfecf8ebf0f5af, type: 3}
       propertyPath: m_PreviousTrimEdge

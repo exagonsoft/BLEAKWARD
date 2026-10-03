@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 81377e9edcab22a4dae6f1ca4e225781
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -39502936955004826
+    second: Oruga demoledora de supervivencia_0
+  - first:
+      213: 253579104499841998
+    second: Oruga demoledora de supervivencia_1
+  - first:
+      213: 8735890751700678549
+    second: Oruga demoledora de supervivencia_2
+  - first:
+      213: -1130258850176512104
+    second: Oruga demoledora de supervivencia_3
+  - first:
+      213: -7272745520169792113
+    second: Oruga demoledora de supervivencia_4
+  - first:
+      213: -3135213994513169749
+    second: Oruga demoledora de supervivencia_5
+  - first:
+      213: -4184797019645754420
+    second: Oruga demoledora de supervivencia_6
+  - first:
+      213: 8015356872425414618
+    second: Oruga demoledora de supervivencia_7
+  - first:
+      213: -1586316579004579176
+    second: Oruga demoledora de supervivencia_8
+  - first:
+      213: 8646421219194011474
+    second: Oruga demoledora de supervivencia_9
+  - first:
+      213: -6628961452029494422
+    second: Oruga demoledora de supervivencia_10
+  - first:
+      213: -6476372659050892436
+    second: Oruga demoledora de supervivencia_11
+  - first:
+      213: -862529510401744703
+    second: Oruga demoledora de supervivencia_12
+  - first:
+      213: 385611200618149431
+    second: Oruga demoledora de supervivencia_13
+  - first:
+      213: -8637880271830793807
+    second: Oruga demoledora de supervivencia_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1388
+        height: 1102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6685633c948a37ff0800000000000000
+      internalID: -39502936955004826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 58
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecbbc2e1ad4e48300800000000000000
+      internalID: 253579104499841998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 60
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5973dbb9a5e1c3970800000000000000
+      internalID: 8735890751700678549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_3
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 63
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89fccfa60938050f0800000000000000
+      internalID: -1130258850176512104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_4
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 63
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d47786b74021b90800000000000000
+      internalID: -7272745520169792113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 39
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba2853aab7b7d74d0800000000000000
+      internalID: -3135213994513169749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_6
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 61
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3c6ea584d9ce5c0800000000000000
+      internalID: -4184797019645754420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_7
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf17e8bb944c3f60800000000000000
+      internalID: 8015356872425414618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 63
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8928e1fd9754cf9e0800000000000000
+      internalID: -1586316579004579176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_9
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 65
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f7574c9424ef770800000000000000
+      internalID: 8646421219194011474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_10
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 63
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b360e5ea23104a0800000000000000
+      internalID: -6628961452029494422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_11
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 39
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c633830416d4f16a0800000000000000
+      internalID: -6476372659050892436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_12
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 79
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0663ceafda704f0800000000000000
+      internalID: -862529510401744703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_13
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 73
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736b14a0857f95500800000000000000
+      internalID: 385611200618149431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oruga demoledora de supervivencia_14
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 17
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1cb2188a5102880800000000000000
+      internalID: -8637880271830793807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Oruga demoledora de supervivencia_0: -39502936955004826
+      Oruga demoledora de supervivencia_1: 253579104499841998
+      Oruga demoledora de supervivencia_10: -6628961452029494422
+      Oruga demoledora de supervivencia_11: -6476372659050892436
+      Oruga demoledora de supervivencia_12: -862529510401744703
+      Oruga demoledora de supervivencia_13: 385611200618149431
+      Oruga demoledora de supervivencia_14: -8637880271830793807
+      Oruga demoledora de supervivencia_2: 8735890751700678549
+      Oruga demoledora de supervivencia_3: -1130258850176512104
+      Oruga demoledora de supervivencia_4: -7272745520169792113
+      Oruga demoledora de supervivencia_5: -3135213994513169749
+      Oruga demoledora de supervivencia_6: -4184797019645754420
+      Oruga demoledora de supervivencia_7: 8015356872425414618
+      Oruga demoledora de supervivencia_8: -1586316579004579176
+      Oruga demoledora de supervivencia_9: 8646421219194011474
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

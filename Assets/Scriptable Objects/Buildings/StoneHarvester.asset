@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingTypeSO
   buildingName: Stone Harvester
   buildingPrefab: {fileID: 1712774678455402239, guid: 2cdf0c91b0e393a4bb40d2ef962d0516, type: 3}
-  sprite: {fileID: 21300000, guid: f13cbb02bb210d549aa86a9b34f79406, type: 3}
+  sprite: {fileID: 21300000, guid: 4bb9a9440aa498940a1eaa7ec6fb9ce3, type: 3}
   minConstructionRadius: 7
   isResourceGenerator: 1
   resourceGeneratorData:
