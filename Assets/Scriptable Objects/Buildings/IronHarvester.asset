@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c272ebe9d3bdac42b507a99241618a9, type: 3}
   m_Name: IronHarvester
   m_EditorClassIdentifier: Assembly-CSharp::BuildingTypeSO
-  buildingName: Wood Harvester
+  buildingName: Iron Harvester
   buildingPrefab: {fileID: 1712774678455402239, guid: 26151f384114fa042947219e1777e81e, type: 3}
-  sprite: {fileID: 21300000, guid: 244867c4e4a733d4eae6aca44e71ee92, type: 3}
+  sprite: {fileID: 21300000, guid: 4cbc07e5bc93d8a4b945d3b53a3a918e, type: 3}
   minConstructionRadius: 7
   isResourceGenerator: 1
   resourceGeneratorData:

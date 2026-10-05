@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingTypeSO
   buildingName: Gold Harvester
   buildingPrefab: {fileID: 1306339390990453113, guid: e647471e05c48a349b8999b6b877754f, type: 3}
-  sprite: {fileID: 21300000, guid: 3d43431c815ee804094eb4775066541c, type: 3}
+  sprite: {fileID: 21300000, guid: d92b37120c4ea714a94880f018e16589, type: 3}
   minConstructionRadius: 7
   isResourceGenerator: 1
   resourceGeneratorData:
