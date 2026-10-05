@@ -216,7 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   targetLookRadius: 20
-  turretGunTransform: {fileID: 398989590223383519}
+  turretGunTransformList:
+  - {fileID: 398989590223383519}
   turretBase: {fileID: 0}
   turretBaseLeft: {fileID: 0}
   turretBaseRight: {fileID: 0}

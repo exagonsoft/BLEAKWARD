@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
     private Enemy targetEnemy;
     [SerializeField] private float targetLookRadius = 30f;
-    [SerializeField] private Transform turretGunTransform;
+    [SerializeField] private List<Transform> turretGunTransformList;
     [SerializeField] private Transform turretBase;
     [SerializeField] private Transform turretBaseLeft;
     [SerializeField] private Transform turretBaseRight;
@@ -18,7 +19,8 @@ public class Tower : MonoBehaviour
 
     private void Awake()
     {
-        if(turretGunTransform == null || turretBase == null)
+        if (turretGunTransformList == null || turretGunTransformList.Count == 0 || turretBase == null || turretGun == null ||
+            turretBaseLeft == null || turretBaseRight == null)
         {
             handleTurretRotation = false;
         }
@@ -42,7 +44,12 @@ public class Tower : MonoBehaviour
             shootTimer += shootTimerMax;
             if (targetEnemy != null)
             {
-                Proyectil.Create(turretGunTransform.position, targetEnemy);
+                Vector3 targetPosition = targetEnemy.transform.position;
+                foreach (Transform gunTransform in turretGunTransformList)
+                {
+                    Vector3 moveDir = targetPosition - gunTransform.position;
+                    Proyectil.Create(gunTransform.position, moveDir, targetEnemy);
+                }
             }
         }
     }
@@ -96,11 +103,10 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        Vector3 scale = turretBase.localScale;
-
-        // Determine target direction
-        Vector3 direction =
-            targetEnemy.transform.position - turretGun.position;
+        // Aim from the gun's pivot, not the muzzle: the gun rotates about this point,
+        // so using the muzzle (which swings with the gun) makes the aim angle feed
+        // back into itself. turretBase is NOT the pivot -- it sits 0.52 above it.
+        Vector3 direction = targetEnemy.transform.position - turretGun.position;
 
         bool isEnemyAtRight = direction.x >= 0f;
 
@@ -108,37 +114,27 @@ public class Tower : MonoBehaviour
         bool isFacingRight =
             turretBaseLeft.position.x > turretBaseRight.position.x;
 
-        if (isEnemyAtRight)
+        if (isEnemyAtRight != isFacingRight)
         {
-            if (!isFacingRight)
-            {
-                // Flip to face right
-                scale.x *= -1f;
-                turretBase.localScale = scale;
-            }
-        }
-        else
-        {
-            if (isFacingRight)
-            {
-                // Flip to face left
-                scale.x *= -1f;
-                turretBase.localScale = scale;
-            }
+            Vector3 scale = turretBase.localScale;
+            scale.x *= -1f;
+            turretBase.localScale = scale;
+            isFacingRight = isEnemyAtRight;
         }
 
 
-        direction = targetEnemy.transform.position - turretGunTransform.position;
+        // The rig's rest pose aims the barrel along -X: gun.localScale.x is -1 and
+        // TowerProjectilSpowner sits at local +X 2.05 of the gun.
+        float aimAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // Mirroring turretBase is a reflection, which inverts the gun's angle.
+        float targetAngle = isFacingRight
+            ? -aimAngle
+            : aimAngle - 180f;
 
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
-
-        turretGun.rotation = Quaternion.RotateTowards(
-            turretGun.rotation,
-            targetRotation,
-            turretRotationSpeed * Time.deltaTime
-        );
-
+        turretGun.localRotation = Quaternion.RotateTowards(
+            turretGun.localRotation,
+            Quaternion.Euler(0f, 0f, targetAngle),
+            turretRotationSpeed * Time.deltaTime);
     }
 }

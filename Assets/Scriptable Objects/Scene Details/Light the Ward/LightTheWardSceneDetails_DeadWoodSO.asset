@@ -26,7 +26,7 @@ MonoBehaviour:
   - {fileID: 8928915885315475473, guid: 732fffaa88693f646a83d49ed0a68167, type: 3}
   - {fileID: 1005100879740177800, guid: a607175835cb0474485d86edaeb8ce2d, type: 3}
   - {fileID: 7520211793076983141, guid: 64b0ab499016b39499b1f50ea70820c2, type: 3}
-  amount: 150
+  amount: 100
   generationChance: 0.605
   placementLayer: 2
   reservesBundleSpace: 0

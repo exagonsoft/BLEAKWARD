@@ -21,7 +21,7 @@ MonoBehaviour:
   terrainBorder: 10
   terrain: {fileID: 11400000, guid: c9f89e68d8844402bbb9cd3ffd8b23c6, type: 2}
   detailSet: {fileID: 11400000, guid: 8a65c44dc643bcf4e91d6be32db762b2, type: 2}
-  detailDensity: 3
+  detailDensity: 2.11
   resourceSettings: {fileID: 11400000, guid: 0c7bc6a3acb14c089dd79a07f25043c6, type: 2}
   maxPlacementAttemptsPerNode: 500
   blockingLayers:

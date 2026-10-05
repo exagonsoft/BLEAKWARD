@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class Enemy : MonoBehaviour
     private float lookForTargetTimer;
     private float lookForTargetTimerMax = 0.2f;
     private HealthSystem healthSystem;
+    [SerializeField] private Transform enemyVisual;
+    private bool isFacingLeft = true;
+    private float facingDeadZone = 0.1f;
 
     private void Start()
     {
@@ -28,6 +32,8 @@ public class Enemy : MonoBehaviour
         lookForTargetTimer = Random.Range(0f, lookForTargetTimerMax);
         healthSystem = GetComponent<HealthSystem>();
         healthSystem.OnDead += HealthSystem_OnDead;
+
+        HandleFacing();
     }
 
    
@@ -63,6 +69,25 @@ public class Enemy : MonoBehaviour
         
     }
 
+    private void HandleFacing()
+    {
+        if (targetTransform == null)
+        {
+            return;
+        }
+
+        bool shouldFaceLeft = targetTransform.position.x < transform.position.x;
+        if (shouldFaceLeft == isFacingLeft)
+        {
+            return;
+        }
+
+        isFacingLeft = shouldFaceLeft;
+        Vector3 visualScale = enemyVisual.localScale;
+        visualScale.x = Mathf.Abs(visualScale.x) * (shouldFaceLeft ? 1f : -1f);
+        enemyVisual.localScale = visualScale;
+    }
+
     private void HandleTarget()
     {
         lookForTargetTimer -= Time.deltaTime;
@@ -84,6 +109,7 @@ public class Enemy : MonoBehaviour
                 if(targetTransform == null)
                 {
                     targetTransform = building.transform;
+                    HandleFacing();
                 }
                 else
                 {
@@ -92,6 +118,7 @@ public class Enemy : MonoBehaviour
                     if (newTargetDistance < currentTargetDistance)
                     {
                         targetTransform = building.transform;
+                        HandleFacing();
                     }
                 }
                 return;
@@ -103,8 +130,10 @@ public class Enemy : MonoBehaviour
             if (BuildingManager.Instance.GetTownHallBuilding() != null)
             {
                 targetTransform = BuildingManager.Instance.GetTownHallBuilding().transform;
+                HandleFacing();
             }
         }
+
     }
 
     private void HealthSystem_OnDead(object sender, System.EventArgs e)
